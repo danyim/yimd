@@ -8,12 +8,10 @@
 get_header(); ?>
 
 
-	<div class="aa_wrap jumbotron">
+	<div class="aa_wrap">
 
 		<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
-
 					<?php get_template_part( 'assets/views/content' ) ?>
-
 				<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>

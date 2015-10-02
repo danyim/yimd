@@ -10,13 +10,9 @@ if ( ! is_active_sidebar( 'aa_sidebar_1' ) ) {
 }
 ?>
 
-<div class="row">
-  <div class="col-md-3">
-  <aside class="aa_sidebar">
+<aside class="aa_sidebar">
 
-  	<?php dynamic_sidebar( 'aa_sidebar_1' ); ?>
+	<?php dynamic_sidebar( 'aa_sidebar_1' ); ?>
 
-  </aside>
-  </div>
-</div>
+</aside>
 <!-- /.aa_sidebar -->

@@ -15,15 +15,11 @@
 </head>
 
 <body <?php body_class(); ?>>
-
   <div class="container">
 	<header class="aa_navigation">
 
-		<nav class="navbar navbar-default aa_nav">
-			<?php wp_nav_menu( array(
-        'items_wrap' => '<ul><li id="item-id">Menu: </li>%3$s</ul>',
-        'theme_location' => 'primary',
-        'menu_id' => 'primary-menu' ) ); ?>
+		<nav class="aa_nav">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav>
 		<!-- /.aa_nav -->
 

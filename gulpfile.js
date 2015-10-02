@@ -308,7 +308,7 @@ gulp.task('ftp', function () {
         log: $.util.log
     });
     return gulp.src(temp + '/**/*', { base: '.tmp/', buffer: false })
-        .pipe(conn.newer(ftpInfo.path)) // Only upload newer files
+        // .pipe(conn.newer(ftpInfo.path)) // Only upload newer files
         .pipe(conn.dest(ftpInfo.path))
         //.pipe($.notify({ message: 'FTP task complete', onLast: true }));
 });

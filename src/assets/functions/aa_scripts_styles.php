@@ -91,9 +91,9 @@ function aa_styles()
      * Minified and Concatenated styles
      *
      */
-    wp_register_style('aa_vendorStyle', get_template_directory_uri() . '/assets/css/vendor.min.css', array(), '1.0', 'all');
+    wp_register_style('aa_vendorStyle', get_template_directory_uri() . '/assets/css/vendor.min.css', array(), '1.1', 'all');
     wp_enqueue_style('aa_vendorStyle'); // Enqueue it!
-    wp_register_style('aa_style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+    wp_register_style('aa_style', get_template_directory_uri() . '/style.css', array(), '1.1', 'all');
     wp_enqueue_style('aa_style'); // Enqueue it!
 
 
@@ -103,7 +103,7 @@ function aa_styles()
      *     Must be included this way to avoid Firefox issues
      *
      */
-    wp_register_style('aa_gfonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300,800,400|Abel', array(), '1.0', 'all');
+    wp_register_style('aa_gfonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300,800,600|Abel|Merriweather:300', array(), '1.1', 'all');
     wp_enqueue_style('aa_gfonts'); // Enqueue it!
 
 

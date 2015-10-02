@@ -28,8 +28,6 @@ body {
     background: $w !important;
     height:100%;
     min-height:100%;
-
-
 }
 /* clear */
 .clear:before,
@@ -82,18 +80,60 @@ select{
     width: 20%;
 }
 
-.aa_wrap {
+h1, h2, h3, h4, h5 {
 
 }
 
-.aa_nav {
-  .menu ul {
-    @extend .nav;
-    @extend .navbar-nav;
+/* ----------------------------------------------------------------------------
+ * Site sections
+ * ------------------------------------------------------------------------- */
+
+div.aa_wrap {
+
+}
+
+.aa_navigation {
+  .aa_nav {
+    .menu ul {
+      li {
+        display: inline-block;
+        padding: 0 0.25rem 0.25rem 0.50rem;
+        background-color: #fff;
+        -webkit-transition: background-color 1.2s;
+        transition: background-color 1.2s;
+        :hover {
+          background-color: #000;
+          color: #fff;
+          font-weight: bold;
+          text-decoration: none;
+        }
+        a {
+          font-family: $f2_lit;
+          text-transform: uppercase;
+          font-size: 1.0rem;
+          display: block;
+          padding: 1.0rem;
+        }
+      }
+    }
   }
 }
+.aa_footer {
+  margin-top: 3.0rem;
+  p {
+    text-align: right;
+      font-family: $f2_lit;
+      font-size: 0.80rem;
+      text-transform: uppercase;
+  }
+}
+
 .aa_sidebar {
+  margin: 3.0rem 0;
+  vertical-align: top;
   aside {
+    display: inline-block;
+    min-width: 200px;
     form {
 
     }
@@ -105,4 +145,54 @@ select{
       list-style-type: none;
     }
   }
+}
+
+.aa_content {
+  .aa_content__title {
+    font-family: $f1_lit;
+    font-size: 3.0rem;
+    font-weight: 600;
+    letter-spacing: -0.12rem;
+    text-align: center;
+    margin-bottom: 1.0em;
+    small {
+      display: block;
+      font-family: $f2_lit;
+      font-size: 1.0rem;
+      letter-spacing: 0rem;
+      text-transform: uppercase;
+      padding-top: 1.0rem;
+      color: #999;
+      a {
+        color: #999 !important;
+      }
+    }
+  }
+  .aa_content__content {
+    font-family: $f4_lit;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.40rem;
+    letter-spacing: .01rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+
+  }
+}
+
+// Pages
+.aa_page {
+  h1.entry-title {
+    text-align: center;
+  }
+  .aa_content {
+
+  }
+}
+.aa_article {
+
+}
+
+.aa_single {
+
 }
