@@ -1,0 +1,14 @@
+{
+  "name": "neatBootstrap",
+  "version": "1.0.0",
+  "homepage": "http://yimd.net",
+  "authors": [
+    "Ahmad Awais"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.4.0",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4"
+  },
+  "devDependencies": {}
+}

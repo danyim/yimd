@@ -1,0 +1,7 @@
+{
+    "host":     "ftp.mysite.com",
+    "user":     "my@user.name",
+    "password:" "mypass",
+    "parallel": 5,
+    "path": "/wp-content/themes/bootstrap"
+}
