@@ -1,4 +1,4 @@
-Advanced Gulp WordPress
+'Solid' Wordpress Theme
 ===
 
 An Advanced Gulp Workflow for WordPress themes.
@@ -12,6 +12,11 @@ Features
 - Lean PHP files with next to no syntax
 - Custom architecture design
 - Theme zip file build with Gulp
+
+Running Theme
+========
+- `npm install && bower install`
+- Publish: `gulp clean && gulp build && gulp ftp`
 
 Getting and Installing the Theme
 --------
