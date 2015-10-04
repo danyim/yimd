@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: neat
 Tags:
 This theme, like WordPress, is licensed under the GPL.
-Neat is distributed under the terms of the GNU GPL v2 or later.
+NeatBootstrap is distributed under the terms of the GNU GPL v2 or later.
 */
 
 /* ----------------------------------------------------------------------------
@@ -30,6 +30,8 @@ Neat is distributed under the terms of the GNU GPL v2 or later.
  * Structure
  * ------------------------------------------------------------------------- */
 @import "partials/structure";
+
+@import "partials/site";
 
 /* WPCore */
 @import "partials/wpcore";
