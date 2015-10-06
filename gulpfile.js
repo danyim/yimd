@@ -153,30 +153,30 @@ gulp.task('bowerFiles', function() {
  * Sass output styles: https://web-design-weekly.com/2014/06/15/different-sass-output-styles/
  */
 gulp.task('styles', ['bowerFiles'], function () {
-    gulp.src('src/assets/css/*.scss')
-    .pipe($.plumber())
-    .pipe($.sourcemaps.init())
-    .pipe($.sass({
-        errLogToConsole: true,
-        outputStyle: 'compact', // Other options: compressed, nested, expanded
-        precision: 10
-    }))
-    .pipe($.sourcemaps.write({includeContent: false}))
-    .pipe($.sourcemaps.init({loadMaps: true}))
-    .pipe($.autoprefixer('last 2 version', '> 1%', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe($.sourcemaps.write('.'))
-    .pipe($.plumber.stop())
-    .pipe(gulp.dest(temp))
-    .pipe($.filter('**/*.css')) // Filtering stream to only css files
-    .pipe($.combineMediaQueries()) // Combines Media Queries
-    .pipe(reload({ stream:true })) // Inject Styles when style file is created
-    .pipe($.rename({ suffix: '.min' }))
-    .pipe($.uglifycss({
-        maxLineLen: 80
-    }))
-    .pipe(gulp.dest(temp))
-    .pipe(reload({stream:true})) // Inject Styles when min style file is created
-    //.pipe($.notify({ message: 'Styles task complete', onLast: true }))
+    return gulp.src('src/assets/css/*.scss')
+        .pipe($.plumber())
+        .pipe($.sourcemaps.init())
+        .pipe($.sass({
+            errLogToConsole: true,
+            outputStyle: 'compact', // Other options: compressed, nested, expanded
+            precision: 10
+        }))
+        .pipe($.sourcemaps.write({includeContent: false}))
+        .pipe($.sourcemaps.init({loadMaps: true}))
+        .pipe($.autoprefixer('last 2 version', '> 1%', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+        .pipe($.sourcemaps.write('.'))
+        .pipe($.plumber.stop())
+        .pipe(gulp.dest(temp))
+        .pipe($.filter('**/*.css')) // Filtering stream to only css files
+        .pipe($.combineMediaQueries()) // Combines Media Queries
+        .pipe(reload({ stream:true })) // Inject Styles when style file is created
+        .pipe($.rename({ suffix: '.min' }))
+        .pipe($.uglifycss({
+            maxLineLen: 80
+        }))
+        .pipe(gulp.dest(temp))
+        .pipe(reload({stream:true})) // Inject Styles when min style file is created
+        //.pipe($.notify({ message: 'Styles task complete', onLast: true }))
 });
 
 /**
@@ -339,7 +339,7 @@ gulp.task('build', ['styles', 'vendorsJs', 'scriptsJs', 'images', 'buildFiles'],
 });
 gulp.task('build:zip', ['build', 'zip']);
 gulp.task('build:ftp', ['build', 'ftp']);
-
+gulp.task('serve', ['build', 'watch']);
 
 // gulp.task('build', ['styles', 'vendorsJs', 'scriptsJs', 'images', 'buildFiles'], function(cb) {
 //     var vendorJsFilter = $.filter(['assets/js/vendors.js'], {restore: true});

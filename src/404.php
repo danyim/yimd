@@ -8,9 +8,9 @@
 get_header(); ?>
 
 	<div class="aa_wrap">
-		<h1><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'neat' ); ?></h1>
+		<h1><?php esc_html_e( 'Page not found.', 'neat' ); ?></h1>
 
-		<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'neat' ); ?></p>
+		<p><?php esc_html_e( 'The page you were looking for couldn''t be found.', 'neat' ); ?></p>
 
 		<?php get_search_form(); ?>
 	</div>

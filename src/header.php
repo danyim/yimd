@@ -16,12 +16,11 @@
 
 <body <?php body_class(); ?>>
   <div class="container">
-	<header class="aa_navigation">
-
-		<nav class="aa_nav">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav>
-		<!-- /.aa_nav -->
-
-	</header>
-	<!-- /.aa_navigation -->
+  	<header class="aa_navigation">
+  		<nav class="aa_nav">
+  			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+  		</nav>
+  		<!-- /.aa_nav -->
+  	</header>
+  	<!-- /.aa_navigation -->
+  </div>
