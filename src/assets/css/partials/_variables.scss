@@ -31,5 +31,5 @@ $g  		: #35ad68;
 $y			: #FFFDD2;
 
 $c-contrast: #FFFF4D;
-$c-nav-highlight-bg: $c-contrast;
-$c-nav-highlight-fg: black;
+$c-nav-highlight-bg: lighten(black, 15%);
+$c-nav-highlight-fg: white;

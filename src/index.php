@@ -12,8 +12,10 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-sm-12">
-					<h1>Daniel Yim</h1>
-					<h3>DEVELOPER, DESIGNER, THINKER</h3>
+					<div class="accent-block">
+						<h1>Daniel Yim</h1>
+						<h3>DEVELOPER &middot; DESIGNER &middot; THINKER</h3>
+					</div>
 				</div>
 			</div>
 		</div>

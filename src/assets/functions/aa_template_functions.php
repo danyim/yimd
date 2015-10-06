@@ -152,6 +152,7 @@ function the_archive_title( $before = '', $after = '' ) {
 }
 endif;
 
+
 if ( ! function_exists( 'the_archive_description' ) ) :
 /**
  * Shim for `the_archive_description()`.
@@ -178,6 +179,12 @@ function the_archive_description( $before = '', $after = '' ) {
 	}
 }
 endif;
+
+function new_excerpt_more( $more ) {
+	return '&nbsp;&nbsp;<small><em><a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'More', 'neat' ) . '</a></em></small>';
+	// return ' <small><em>[ ... More ]</em></small>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 /**
  * Returns true if a blog has more than 1 category.

@@ -16,7 +16,7 @@
 			</h1>
 
 			<div class="aa_content__content">
-				<?php the_content(); ?>
+				<?php the_excerpt(); ?>
 				<?php
 					wp_link_pages( array(
 						'before' => '<div class="aa_pagelinks">' . esc_html__( 'Pages:', 'AA_Theme' ),

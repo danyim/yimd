@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<div class="aa_single">
+	<div class="aa_wrap">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -26,7 +26,7 @@ get_header(); ?>
 
 
 	</div>
-	<!-- /.aa_single -->
+	<!-- /.aa_wrap -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
