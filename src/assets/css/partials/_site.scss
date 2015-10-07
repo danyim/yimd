@@ -217,7 +217,7 @@ nav.post-navigation {
         margin: 0.40rem 0;
         a:hover {
           color: $b;
-          text-decoration: none;
+          text-decoration: underline;
           :focus {
             outline: 0;
           }
@@ -246,47 +246,30 @@ nav.post-navigation {
 }
 
 // Extensions
-// .__ext_base_title {
-//     font-family: $f7_lit;
-//     font-size: 3.0rem;
-//     font-weight: 300;
-//     // letter-spacing: -0.06rem;
-//     // text-align: center;
-//     margin-bottom: 1.0em;
-// }
 .__ext_base_title {
-    font-family: $f6_lit;
-    font-size: 2.80rem;
-    font-weight: 900;
-    letter-spacing: -0.06rem;
-    text-align: center;
-    margin-bottom: 1.0em;
-    a {
-      color: $b;
-    }
+  font: normal 900 2.80rem/1.0 $f6_lit;
+  letter-spacing: -0.06rem;
+  text-align: center;
+  margin-bottom: 1.0em;
+  a {
+    color: $b;
+  }
 }
 .__ext_base_subtitle {
-  font-family: $f2_lit;
-  font-size: 1.6rem;
+  font: normal 1.6rem/1.0 $f2_lit;
   text-transform: uppercase;
   letter-spacing: -0.06rem;
   margin-bottom: 1.0em;
 }
 .__ext_body-serif {
-  font-family: $f4_lit; // Serif
-  font-size: 1.30rem;
-  font-weight: 400;
+  font: normal 400 1.30rem/1.6 $f4_lit; // Serif
 }
 .__ext_body-sans-serif {
-  font-family: $f1_lit; // Non-serif
-  font-size: 1.20rem;
-  font-weight: 300;
+  font: normal 300 1.20rem/1.5 $f1_lit; // Non-serif
 }
 .__ext_posted_on {
   display: block;
-  font-family: $f2_lit;
-  //font-weight: 100; // Lato doesn't have a weight
-  font-size: 1.0rem;
+  font: normal 1.0rem/1.0 $f2_lit;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   padding-top: 1.0rem;

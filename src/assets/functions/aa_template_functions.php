@@ -188,7 +188,7 @@ function the_archive_description( $before = '', $after = '' ) {
 endif;
 
 function new_excerpt_more( $more ) {
-	return '&nbsp;&nbsp;<small><em><a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Continue reading', 'neat' ) . '</a></em></small>';
+	return '...&nbsp;&nbsp;<small><em><a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Continue reading', 'neat' ) . '</a></em></small>';
 	// return ' <small><em>[ ... More ]</em></small>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
