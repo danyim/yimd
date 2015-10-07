@@ -132,6 +132,7 @@ gulp.task('bowerFiles', function() {
             errLogToConsole: true,
             precision: 10
         }))
+        .on('error', $.util.log)
         .pipe($.concat('vendor.css'))
         .pipe($.rename({ suffix: '.min' }))
         .pipe($.uglifycss({
@@ -161,6 +162,7 @@ gulp.task('styles', ['bowerFiles'], function () {
             outputStyle: 'compact', // Other options: compressed, nested, expanded
             precision: 10
         }))
+        .on('error', $.util.log)
         .pipe($.sourcemaps.write({includeContent: false}))
         .pipe($.sourcemaps.init({loadMaps: true}))
         .pipe($.autoprefixer('last 2 version', '> 1%', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))

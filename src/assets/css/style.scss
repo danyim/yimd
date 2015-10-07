@@ -20,17 +20,14 @@ NeatBootstrap is distributed under the terms of the GNU GPL v2 or later.
 @import "partials/variables";
 
 /* ----------------------------------------------------------------------------
- * Normalize & Santize
+ * Fonts
  * ------------------------------------------------------------------------- */
-@import "vendor/normalize";
-@import "vendor/sanitize";
-@import "vendor/vendor";
+@import "vendor/fonts";
 
 /* ----------------------------------------------------------------------------
  * Structure
  * ------------------------------------------------------------------------- */
 @import "partials/structure";
-
 @import "partials/site";
 
 /* WPCore */

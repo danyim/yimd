@@ -19,7 +19,7 @@ function the_posts_navigation() {
 		return;
 	}
 	?>
-	<nav class="navigation posts-navigation" role="navigation">
+	<nav class="navigation posts-navigation" role="Ïigation">
 		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'neat' ); ?></h2>
 		<div class="nav-links">
 
@@ -72,13 +72,20 @@ if ( ! function_exists( 'aa_posted_on' ) ) :
  * @since Underscores.me 1.0
  */
 function aa_posted_on() {
-	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'neat' ),
+	// printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'neat' ),
+	// 	esc_url( get_permalink() ),
+	// 	esc_attr( get_the_time() ),
+	// 	esc_attr( get_the_date( 'c' ) ),
+	// 	esc_html( get_the_date() ),
+	// 	esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+	// 	esc_attr( sprintf( __( 'View all posts by %s', 'neat' ), get_the_author() ) ),
+	// 	esc_html( get_the_author() )
+	// );
+	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> by <span class="author vcard">%5$s</span></span>', 'neat' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
-		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( __( 'View all posts by %s', 'neat' ), get_the_author() ) ),
 		esc_html( get_the_author() )
 	);
 }
@@ -181,7 +188,7 @@ function the_archive_description( $before = '', $after = '' ) {
 endif;
 
 function new_excerpt_more( $more ) {
-	return '&nbsp;&nbsp;<small><em><a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'More', 'neat' ) . '</a></em></small>';
+	return '&nbsp;&nbsp;<small><em><a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Continue reading', 'neat' ) . '</a></em></small>';
 	// return ' <small><em>[ ... More ]</em></small>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');

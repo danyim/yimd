@@ -2,7 +2,7 @@
  * Site sections
  * ------------------------------------------------------------------------- */
 
-div.cover {
+.cover {
   height: 400px;
   background-image: url('assets/img/bg-cover.jpeg');
   background-size: cover;
@@ -13,7 +13,7 @@ div.cover {
   .accent-block {
     display: inline-block;
     background-color: rgba(255,255,255,0.4);
-    color: black;
+    color: $b;
     padding: 2.0rem;
     margin: 3.0rem 0;
     h1 { // Name
@@ -40,32 +40,75 @@ div.cover {
   }
 }
 
-.aa_navigation {
-  .aa_nav {
-    .menu ul {
-      margin: 0;
-      li {
-        display: inline-block;
-        padding: 0 0.25rem 0.25rem 0.50rem;
-        background-color: #fff;
-        -webkit-transition: background-color 0.5s;
-        transition: background-color 0.5s;
+.aa_navigation .aa_nav {
+  ul {
+    margin: 0;
+    // Nav transitions (can't nest these with SCSS)
+    li:after {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 0;
+      background-color: $c-nav-highlight-bg;
+      content: "";
+      transition: height 0.2s;
+    }
+    li:hover:after {
+        height: 3px;
+    }
+    li.current-menu-item:after {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 3px;
+      background-color: $c-nav-highlight;
+      content: "";
+      transition: width 0.2s;
+    }
+    li.current-menu-item:hover:after {
+        width: 60%;
+    }
+    //////////////// end nav transitions
+
+    li {
+      position: relative;
+      display: inline-block;
+      // On the fence about having this fixed width
+      // width: 5.0rem;
+      margin: 0 0.40rem 0.50rem 0;
+      background-color: #fff;
+
+      :hover {
+        // background-color: $c-nav-highlight-bg;
+        // color: $c-nav-highlight-fg;
+        // box-shadow: 0px 5px 10px #ccc;
+        // transition: box-shadow 0.2s;
+        text-decoration: none;
+      }
+      a {
+        font-family: $f2_lit;
+        // font-family: $f8_lit;
+        text-transform: uppercase;
+        font-size: 1.00rem;
+        display: block;
+        padding: 1.0rem 1.0rem 0.50rem 1.0rem;
+        color: $b;
         :hover {
-          background-color: $c-nav-highlight-bg;
-          color: $c-nav-highlight-fg;
           font-weight: bold;
           text-decoration: none;
-          box-shadow: 0px 5px 10px #ccc;
-          -webkit-transition: box-shadow 0.2s;
-          transition: box-shadow 0.2s;
         }
-        a {
-          font-family: $f2_lit;
-          text-transform: uppercase;
-          font-size: 1.0rem;
-          display: block;
-          padding: 1.0rem;
+        :active, :visited {
+          color: $b;
+          text-decoration: none;
         }
+      }
+      a:focus {
+        text-decoration: none;
+        outline: 0;
       }
     }
   }
@@ -81,62 +124,18 @@ nav.post-navigation {
   }
 }
 
-#comments {
-  .comments-title {
-    // Title
-    @extend .__ext_base_subtitle;
-  }
-  .comment-list {
-
-  }
-}
-
-.aa_footer {
-  margin: 3.0rem 0;
-  p {
-    text-align: right;
-    font-family: $f2_lit;
-    font-size: 0.80rem;
-    text-transform: uppercase;
-  }
-}
-
-
-.widget {
-  display: inline-block;
-min-width: 200px;
-  h1 {
-    font-family: $f2_lit;
-    text-transform: uppercase;
-  }
-  ul {
-    list-style-type: none;
-    li {
-      font-family: $f1_lit;
-      font-weight: 300;
-      a:hover {
-        font-weight: 600;
-        text-decoration: none;
-      }
-    }
-  }
-}
-.widget_search {
-  font-family: $f2_lit;
-  font-size: 0.80rem;
-  text-transform: uppercase;
-}
-.aa_sidebar {
-  margin: 3.0rem 0 1.5rem;
-  vertical-align: top;
-}
-
 // Root style for all pages
-div.aa_wrap {
+.aa_wrap {
   h1 {
     @extend .__ext_base_title;
   }
 
+  .page_title {
+
+  }
+  .page_content {
+
+  }
   // Main view
   .aa_index {
     .aa_content__title {
@@ -159,7 +158,6 @@ div.aa_wrap {
     .aa_single__title {
       // Title
       @extend .__ext_base_title;
-
       .aa_single__meta {
         // Posted on
         text-align: center;
@@ -167,8 +165,8 @@ div.aa_wrap {
       }
     }
     .aa_single__content {
-      // Body
       @extend .__ext_body-serif;
+      color: $b;
     }
   }
 
@@ -179,7 +177,71 @@ div.aa_wrap {
       @extend .__ext_base_title;
     }
     .aa_content {
+      color: $b;
     }
+  }
+}
+
+
+.comments-area {
+  .comments-title, .comment-reply-title {
+    // Title: "x thoughts on 'Post Name'""
+    @extend .__ext_base_subtitle;
+  }
+  .comment-list {
+
+  }
+}
+
+.aa_sidebar {
+  margin: 3.0rem 0 1.5rem;
+  vertical-align: top;
+
+  .widget {
+    display: inline-block;
+    min-width: 200px;
+    font-family: $f1_lit;
+    font-weight: 300;
+    h1 {
+      font-family: $f2_lit;
+      font-size: 1.00rem;
+      font-weight: bold;
+      // letter-spacing: 0.20rem;
+      text-transform: uppercase;
+      margin-bottom: 1.0rem;
+    }
+    ul {
+      list-style-type: none;
+      li {
+        font-size: 0.90rem;
+        margin: 0.40rem 0;
+        a:hover {
+          color: $b;
+          text-decoration: none;
+          :focus {
+            outline: 0;
+          }
+        }
+      }
+    }
+    .search-form {
+      .screen-reader-text {
+        font-family: $f1_lit;
+        font-weight: 300;
+        font-size: 0.80rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.aa_footer {
+  margin: 3.0rem 0;
+  p {
+    text-align: right;
+    font-family: $f2_lit;
+    font-size: 0.80rem;
+    text-transform: uppercase;
   }
 }
 
@@ -194,11 +256,14 @@ div.aa_wrap {
 // }
 .__ext_base_title {
     font-family: $f6_lit;
-    font-size: 3.0rem;
+    font-size: 2.80rem;
     font-weight: 900;
     letter-spacing: -0.06rem;
     text-align: center;
     margin-bottom: 1.0em;
+    a {
+      color: $b;
+    }
 }
 .__ext_base_subtitle {
   font-family: $f2_lit;
@@ -209,7 +274,7 @@ div.aa_wrap {
 }
 .__ext_body-serif {
   font-family: $f4_lit; // Serif
-  font-size: 1.40rem;
+  font-size: 1.30rem;
   font-weight: 400;
 }
 .__ext_body-sans-serif {

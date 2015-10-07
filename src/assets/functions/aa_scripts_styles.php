@@ -23,8 +23,6 @@ add_action('wp_enqueue_scripts', 'aa_scripts');
 function aa_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
-
-
     	wp_enqueue_script('jquery'); // Enqueue it!
         //wp_deregister_script('jquery'); // Deregister WordPress jQuery
         //wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array(), '1.11.2');
@@ -42,7 +40,6 @@ function aa_scripts()
          */
         wp_register_script('aa_vendorsJs', get_template_directory_uri() . '/assets/js/vendors.min.js'); // Vendor scripts
         wp_enqueue_script('aa_vendorsJs'); // Enqueue it!
-
         wp_register_script('aa_customJs', get_template_directory_uri() . '/assets/js/scripts.min.js'); // Custom scripts
         wp_enqueue_script('aa_customJs'); // Enqueue it!
 
@@ -103,7 +100,7 @@ function aa_styles()
      *     Must be included this way to avoid Firefox issues
      *
      */
-    wp_register_style('aa_gfonts', 'http://fonts.googleapis.com/css?family=Lato:100,300,400,900|EB+Garamond|Open+Sans:300,600,800|Open+Sans+Condensed:300,700|Abel|Merriweather:300', array(), '1.1', 'all');
+    wp_register_style('aa_gfonts', 'http://fonts.googleapis.com/css?family=Oswald:300|Lato:100,300,400,900|EB+Garamond|Open+Sans:300,600,800|Open+Sans+Condensed:300,700|Abel|Merriweather:300', array(), '1.1', 'all');
     wp_enqueue_style('aa_gfonts'); // Enqueue it!
 
 
@@ -115,9 +112,6 @@ function aa_styles()
 
     // wp_register_style('aa_xyz_css', get_template_directory_uri() . '/assets/css/vendor/xyz.css', array(), '1.0', 'all');
     // wp_enqueue_style('aa_xyz_css'); // Enqueue it!
-
-
-
 }
 
 /**

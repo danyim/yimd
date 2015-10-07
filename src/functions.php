@@ -56,6 +56,13 @@ function neat_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	/*
+	 * Enable support for HTML5 Search Forms
+	 *
+	 * @link https://codex.wordpress.org/Function_Reference/get_search_form
+	 */
+	add_theme_support( 'html5', array( 'search-form' ) );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'neat' ),
@@ -77,8 +84,6 @@ function neat_setup() {
 }
 endif; // neat_setup
 add_action( 'after_setup_theme', 'neat_setup' );
-
-
 
 /**
  * Styles and scripts
