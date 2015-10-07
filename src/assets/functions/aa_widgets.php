@@ -24,7 +24,7 @@ function neat_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="col-md-3 vtop widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h1 class="widget-title">',
+		'before_title'  => '<h1 class="widget-title">// ',
 		'after_title'   => '</h1>',
 	) );
 }

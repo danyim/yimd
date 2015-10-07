@@ -10,7 +10,7 @@
 
   <div class="container">
     <footer class="aa_footer">
-    	<p>&copy; 2015 | <a href="https://twitter.com/danyim" target="_blank">@danyim</a></p>
+    	<p>&copy; 10 &middot; 2015&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://twitter.com/danyim" target="_blank">@danyim</a></p>
     </footer>
     <!-- /.aa_footer -->
     <?php wp_footer(); ?>
