@@ -262,6 +262,20 @@ gulp.task('images', function() {
         //.pipe($.notify( { message: 'Images task complete', onLast: true } ) );
 });
 
+
+/**
+ * Fonts
+ *
+ * Look at src/assets/fonts and move the fonts to the right directory
+ */
+gulp.task('fonts', function() {
+    // Add the newer pipe to pass through newer images only
+    return gulp.src(['src/assets/fonts/**/*.{woff,woff2,ttf,eot,svg}'])
+        .pipe($.newer(temp + '/assets/fonts'))
+        .pipe(gulp.dest(temp + '/assets/fonts'))
+        //.pipe($.notify( { message: 'Fonts task complete', onLast: true } ) );
+});
+
 /**
  * Clean gulp cache
  */
@@ -300,7 +314,7 @@ gulp.task('buildFiles', function() {
   *
   * Taking the build folder, which has been cleaned, containing optimized files and zipping it up to send out as an installable theme
   */
-gulp.task('zip', ['styles', 'vendorsJs', 'scriptsJs', 'images', 'buildFiles'], function () {
+gulp.task('zip', ['styles', 'vendorsJs', 'scriptsJs', 'images', 'fonts', 'buildFiles'], function () {
     return gulp.src(temp + '/**/*')
         .pipe($.zip(project + '.zip'))
         .pipe($.size({
@@ -340,7 +354,7 @@ gulp.task('ftp', function () {
 
 
 // Package Distributable Theme
-gulp.task('build', ['styles', 'vendorsJs', 'scriptsJs', 'images', 'buildFiles'], function(cb) {
+gulp.task('build', ['styles', 'vendorsJs', 'scriptsJs', 'images', 'fonts', 'buildFiles'], function(cb) {
     // var vendorJsFilter = $.filter(['assets/js/vendors.js'], {restore: true});
 
     // return gulp.src(temp + '/**/*')
