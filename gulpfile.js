@@ -107,8 +107,22 @@ gulp.task('bowerFiles', function() {
     return gulp.src($.mainBowerFiles({
             overrides: {
                 bootstrap: {
+                    // Pick and choose what functionality you really need:
+                    // http://getbootstrap.com/javascript/
                     main: [
-                        './dist/js/bootstrap.js',
+                        //'./dist/js/bootstrap.js', // All
+                        // './js/affix.js',
+                        // './js/alert.js',
+                        // './js/button.js',
+                        // './js/carousel.js',
+                        // './js/collapse.js',
+                        // './js/dropdown.js',
+                        // './js/modal.js',
+                        // './js/popover.js',
+                        './js/scrollspy.js',
+                        './js/tab.js',
+                        // './js/tooltip.js',
+                        // './js/transition.js',
                         './dist/css/*.css'
                         //'./dist/fonts/*.*'
                     ]
