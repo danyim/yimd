@@ -7,8 +7,8 @@
 
 get_header(); ?>
 <div class="container">
-	<div class="row aa_wrap aa_search">
-		<div class="col-md-10 col-md-offset-1">
+	<div class="row aa_wrap">
+		<div class="col-md-8 col-md-offset-2">
 			<?php if ( have_posts() ) : ?>
 				<div class="aa_header">
 					<h4 class="aa_h1">

@@ -26,14 +26,6 @@
   transition: background-color 0.2s;
   margin: 0;
 
-  .logo {
-    display: none;
-    position: absolute;
-    right: 5px;
-    top: 0;
-    font: normal 1.75rem $f_logo;
-    letter-spacing: -0.20rem;
-  }
   ul {
     margin: 0;
     // Nav transitions (can't nest these with SCSS)
@@ -158,58 +150,18 @@ nav.post-navigation {
 
 // Root style for all pages
 .aa_wrap {
-  h1 {
+  .content_title {
     @extend .__ext_base_title;
   }
-
-  .page_title {
-
-  }
-  .page_content {
-
-  }
-  // Main view
-  .aa_index {
-    .aa_content__title {
-      @extend .__ext_base_title;
-      .aa_content__subtitle {
-        @extend .__ext_posted_on;
-        font-family: $f1_lit;
-      }
-    }
-    .aa_content__content {
-      @extend .__ext_body-serif;
-      letter-spacing: 0.01rem;
-      line-height: 1.5;
-      word-wrap: break-word;
+  .post_title {
+    @extend .__ext_base_title;
+    .subtitle {
+      @extend .__ext_posted_on;
+      font-family: $f1_lit;
     }
   }
-
-  // Single post view
-  .aa_single {
-    .aa_single__title {
-      // Title
-      @extend .__ext_base_title;
-      .aa_single__meta {
-        // Posted on
-        text-align: center;
-        @extend .__ext_posted_on;
-      }
-    }
-    .aa_single__content {
-      @extend .__ext_body-serif;
-      color: $b;
-    }
-  }
-
-  .aa_page {
+  .content {
     @extend .__ext_body-sans-serif;
-    h1.entry-title {
-      @extend .__ext_base_title;
-    }
-    .aa_content {
-      color: $b;
-    }
   }
 }
 

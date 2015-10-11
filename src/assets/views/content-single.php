@@ -20,9 +20,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<h1 class="aa_single__title">
+				<h1 class="post_title">
 					<?php the_title(); ?>
-					<div class="aa_single__meta">
+					<div class="subtitle">
 						<?php aa_posted_on(); ?>
 					</div>
 					<!-- /.aa_single__meta -->
@@ -44,7 +44,7 @@
 		</div>
 	</div>
 
-	<div class="aa_single__content container">
+	<div class="content container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 

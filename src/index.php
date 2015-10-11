@@ -21,22 +21,19 @@ get_header(); ?>
 </div>
 
 <div class="container">
-	<div id="home" class="row aa_wrap">
-
-		<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
+	<div class="row aa_wrap">
+		<div class="col-md-8 col-md-offset-2">
+			<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'assets/views/content' ) ?>
 				<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'assets/views/content', 'none' ); ?>
-
-		<?php endif; ?>
-
+				<?php the_posts_navigation(); ?>
+			<?php else : ?>
+				<?php get_template_part( 'assets/views/content', 'none' ); ?>
+			<?php endif; ?>
+		</div>
 	</div>
 	<!-- /.aa_wrap -->
+</div>
 
 	<div class="aa_wrap hidden">
 		<div id="about" class="row aa_index">
