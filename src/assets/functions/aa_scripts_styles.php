@@ -101,7 +101,7 @@ function aa_styles()
      *
      */
     //wp_register_style('aa_gfonts', 'http://fonts.googleapis.com/css?family=Oswald:300|Lato:100,300,400,900|EB+Garamond|Open+Sans:300,600,800|Open+Sans+Condensed:300,700|Abel|Merriweather:300', array(), '1.1', 'all');
-    wp_register_style('aa_gfonts', 'http://fonts.googleapis.com/css?family=Lato:100,300,400,900|Open+Sans:300,600,800|Abel', array(), '1.1', 'all');
+    wp_register_style('aa_gfonts', 'http://fonts.googleapis.com/css?family=Copse|Lato:100,300,400,900|Open+Sans:300,600,800|Abel', array(), '1.1', 'all');
     wp_enqueue_style('aa_gfonts'); // Enqueue it!
 
 
