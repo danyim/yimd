@@ -56,16 +56,3 @@
 		<!-- /.aa_nav -->
 	</header>
 	<!-- /.aa_navigation -->
-  <div class="jumbotron cover">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-sm-12">
-        <div class="accent-block">
-          <h1>Daniel Yim</h1>
-          <h3>DEVELOPER &middot; DESIGNER &middot; THINKER</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  <div class="container">

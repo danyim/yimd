@@ -7,11 +7,9 @@
  * @package NeatBootstrap
  */
 ?>
-
-  </div>
   <div class="container">
     <footer class="aa_footer">
-    	<p>&copy; 10 &middot; 2015&nbsp;&nbsp;|&nbsp;&nbsp;DESIGNED BY <a href="https://twitter.com/danyim" target="_blank">@danyim</a></p>
+    	<p>&copy; 2015&nbsp;&nbsp;&middot;&nbsp;&nbsp;BY <a href="https://twitter.com/danyim" target="_blank">@danyim</a></p>
     </footer>
     <!-- /.aa_footer -->
     <?php wp_footer(); ?>

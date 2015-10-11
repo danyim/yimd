@@ -10,9 +10,12 @@ if ( ! is_active_sidebar( 'aa_sidebar_1' ) ) {
 }
 ?>
 
-<!-- <aside class="aa_sidebar"> -->
-<div class="row aa_sidebar">
-	<?php dynamic_sidebar( 'aa_sidebar_1' ); ?>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <aside class="aa_sidebar">
+        <?php dynamic_sidebar( 'aa_sidebar_1' ); ?>
+      </aside><!-- /.aa_sidebar -->
+    </div>
+  </div>
 </div>
-<!-- </aside> -->
-<!-- /.aa_sidebar -->
