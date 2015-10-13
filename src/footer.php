@@ -7,12 +7,14 @@
  * @package NeatBootstrap
  */
 ?>
-  <div class="container">
-    <footer class="aa_footer">
-    	<p>&copy; 2015&nbsp;&nbsp;&middot;&nbsp;&nbsp;BY <a href="https://twitter.com/danyim" target="_blank">@danyim</a></p>
-    </footer>
-    <!-- /.aa_footer -->
-    <?php wp_footer(); ?>
+  <div class="container-fluid footer-container footer-container-inverse">
+    <div class="container">
+      <footer class="footer">
+      	<p>&copy; 2015&nbsp;&nbsp;&middot;&nbsp;&nbsp;BY <a href="https://twitter.com/danyim" target="_blank">@danyim</a></p>
+      </footer>
+      <!-- /.aa_footer -->
+      <?php wp_footer(); ?>
+    </div>
   </div>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

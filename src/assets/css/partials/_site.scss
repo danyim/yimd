@@ -151,6 +151,7 @@ nav.post-navigation {
     background-color: rgba(255,255,255,0.7);
   }
 }
+
 .title-card {
   font: normal 300 2.2rem/1.0 $f6_lit;
   text-transform: uppercase;
@@ -162,7 +163,7 @@ nav.post-navigation {
   position: absolute;
   left: 0;
   bottom: -1.0rem;
-  width: 75%;
+  width: 85%;
   height: 1.0rem;
   margin-left: 0;
   background-color: $c-nav-highlight;
@@ -170,9 +171,10 @@ nav.post-navigation {
   transition: width 0.2s ease-in-out, background-color 0.2s;
 }
 .title-card:hover:after {
-  width: 85%;
-  background-color: darken($c-nav-highlight, 10);
+  width: 89%;
+  // background-color: darken($c-nav-highlight, 10);
 }
+
 .portfolio {
   .pfl {
     .container {
@@ -209,7 +211,7 @@ nav.post-navigation {
 
 // Root style for all pages
 .aa_wrap {
-  margin-top: 1.0rem;
+  margin: 1.0rem 0 3.0rem 0;
   .content-title {
     @extend .__ext_base_title;
   }
@@ -231,7 +233,6 @@ nav.post-navigation {
   }
 }
 
-
 .comments-area {
   .comments-title, .comment-reply-title {
     // Title: "x thoughts on 'Post Name'""
@@ -242,7 +243,8 @@ nav.post-navigation {
   }
 }
 
-.aa_sidebar {
+// SIdebar styles
+.sidebar {
   margin: 3.0rem 0 1.5rem;
   vertical-align: top;
 
@@ -281,7 +283,24 @@ nav.post-navigation {
   }
 }
 
-.aa_footer {
+// Inverse sidebar and footer styles
+.sidebar-container, .footer-container {
+  background-color: $w;
+  color: $b;
+}
+.sidebar-container-inverse, .footer-container-inverse {
+  background-color: $b;
+  color: $w;
+  a {
+    color: $w;
+  }
+  a:hover {
+    color: darken($w, 10) !important;
+  }
+}
+
+// Footer styles
+.footer {
   margin: 3.0rem 0;
   p {
     text-align: right;
