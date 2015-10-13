@@ -3,13 +3,14 @@
  * @package NeatBootstrap
  */
 ?>
-<article class="aa_index">
+<article class="aa_content">
 
-	<h1 class="post_title">
+	<h1 class="post-title">
 		<a href="<?php the_permalink(); ?>">
 			<?php the_title(); ?>
 		</a>
-		<small class="subtitle"><?php aa_posted_on(); ?></small>
+		<small class="post-subtitle"><?php aa_posted_on(); ?> &dash; <?php the_category(' '); ?></small>
+
 	</h1>
 
 	<div class="content">

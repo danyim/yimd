@@ -13,8 +13,10 @@ get_header(); ?>
 		<div class="col-md-8 col-md-offset-2">
 			<?php if ( have_posts() ) : ?>
 				<header class="aa_headerblock">
-					<h1 class="aa_h1"> <?php the_archive_title();?> </h1>
-					<div class="aa_dsc"> <?php the_archive_description(); ?> </div>
+					<h1 class="content-header-small">
+						<?php the_archive_title();?>
+					</h1>
+					<div> <?php the_archive_description(); ?> </div>
 				</header>
 				<!-- /.aa_headerblock -->
 			<?php while ( have_posts() ) : the_post(); ?>

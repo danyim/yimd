@@ -20,9 +20,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<h1 class="post_title">
+				<h1 class="post-title">
 					<?php the_title(); ?>
-					<div class="subtitle">
+					<div class="post-subtitle">
 						<?php aa_posted_on(); ?>
 					</div>
 					<!-- /.aa_single__meta -->

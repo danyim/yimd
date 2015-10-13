@@ -13,7 +13,7 @@
 get_header(); ?>
 <div class="container">
 	<div class="row aa_wrap">
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-12">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'assets/views/content', 'page' ); ?>
 				<?php

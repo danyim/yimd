@@ -5,9 +5,9 @@
  * @package NeatBootstrap
  */
 ?>
-<article class="aa_article">
+<article class="aa_search">
 
-	<h1 class="content_title">Results</h1>
+	<h1 class="content-title">Results</h1>
 
 	<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 	<?php if ( 'post' == get_post_type() ) : ?>
@@ -17,10 +17,10 @@
 		<!-- /.aa_article__meta -->
 	<?php endif; ?>
 
-		<div class="content">
-			<?php the_excerpt(); ?>
-		</div>
-		<!-- /.aa_article__excerpt -->
+	<div class="content">
+		<?php the_excerpt(); ?>
+	</div>
+	<!-- /.aa_article__excerpt -->
 
 </article>
 <!-- /.aa_search -->
