@@ -163,30 +163,29 @@ nav.post-navigation {
   position: absolute;
   left: 0;
   bottom: -1.0rem;
-  width: 85%;
+  width: 100%;
   height: 1.0rem;
   margin-left: 0;
   background-color: $c-nav-highlight;
   content: "";
-  transition: width 0.2s ease-in-out, background-color 0.2s;
+  transition: width 0.2s ease-in-out;
 }
-.title-card:hover:after {
-  width: 89%;
-  // background-color: darken($c-nav-highlight, 10);
-}
+// .title-card:hover:after {
+//   width: 89%;
+// }
 
 .portfolio {
   .pfl {
     .container {
       padding: 2.0rem 0;
-      .content {
-        @extend .__ext_body-sans-serif;
-        min-height: 250px;
-        color: $w;
-      }
-      .content-inverse {
-        color: $b;
-      }
+    }
+    .content {
+      @extend .__ext_body-sans-serif;
+      min-height: 250px;
+      color: $b;
+    }
+    .content-inverse {
+      color: $w;
     }
   }
   .pfl-header {
@@ -197,13 +196,22 @@ nav.post-navigation {
     background-size: cover;
     background-position: center center;
   }
-  .pfl-2 {
-    background-image: url('https://images.unsplash.com/photo-1443479579455-1860f114bf77?q=80&fm=jpg&s=dc7000360dec6e5368d1ed3e4d0b38ae');
-    background-size: cover;
-    background-position: center center;
+  .pfl-2 { // Just an exmaple of what's possible
+    background-color: lighten(blue, 50);
+    .content {
+      min-height: 500px;
+      margin-top: 3.5rem;
+      text-align: center;
+      vertical-align: middle;
+    }
   }
   .pfl-3 {
     background-image: url('https://images.unsplash.com/photo-1436874555419-bb64221c5c1d?q=80&fm=jpg&s=4593f78e972ee577c98775d55b66a344');
+    background-size: cover;
+    background-position: center center;
+  }
+  .pfl-4 {
+    background-image: url('https://images.unsplash.com/photo-1443479579455-1860f114bf77?q=80&fm=jpg&s=dc7000360dec6e5368d1ed3e4d0b38ae');
     background-size: cover;
     background-position: center center;
   }
