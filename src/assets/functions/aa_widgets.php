@@ -22,7 +22,7 @@ function neat_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'neat' ),
 		'id'            => 'aa_sidebar_1',
 		'description'   => '',
-		'before_widget' => '<div id="%1$s" class="col-md-3 vtop widget %2$s">',
+    'before_widget' => '<div id="%1$s" class="col-sm-6 col-md-6 col-lg-3 widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h1 class="widget-title">// ',
 		'after_title'   => '</h1>',

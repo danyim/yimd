@@ -8,7 +8,7 @@
 get_header(); ?>
 <div class="container">
 	<div class="row aa_wrap">
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-10 col-md-offset-1">
 			<?php if ( have_posts() ) : ?>
 				<div class="aa_header well">
 					<h4 class="content-header-small">

@@ -251,17 +251,19 @@ nav.post-navigation {
   }
 }
 
-// SIdebar styles
+// Sidebar styles
 .sidebar {
-  margin: 3.0rem 0 1.5rem;
-  vertical-align: top;
+  margin-top: 3.0rem;
+  margin-bottom: 1.5rem;
 
+  // Individual widget boxes
   .widget {
     display: inline-block;
-    min-width: 200px;
+    // min-width: 200px;
+    // width: 100px;
     font-family: $f1_lit;
     font-weight: 300;
-    padding: 0 25px 0 0;
+    vertical-align: top;
     h1 {
       font: bold 1.00rem $f2_lit;
       // letter-spacing: 0.20rem;

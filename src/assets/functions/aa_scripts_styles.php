@@ -88,9 +88,9 @@ function aa_styles()
      * Minified and Concatenated styles
      *
      */
-    wp_register_style('aa_vendorStyle', get_template_directory_uri() . '/assets/css/vendor.min.css', array(), '1.2', 'all');
+    wp_register_style('aa_vendorStyle', get_template_directory_uri() . '/assets/css/vendor.min.css', array(), '0.3', 'all');
     wp_enqueue_style('aa_vendorStyle'); // Enqueue it!
-    wp_register_style('aa_style', get_template_directory_uri() . '/style.css', array(), '1.2', 'all');
+    wp_register_style('aa_style', get_template_directory_uri() . '/style.css', array(), '0.3', 'all');
     wp_enqueue_style('aa_style'); // Enqueue it!
 
 
