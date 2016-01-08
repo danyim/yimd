@@ -2,7 +2,7 @@
 /**
  * The template part for displaying results in search pages.
  *
- * @package NeatBootstrap
+ * @package SolidBootstrap
  */
 ?>
 <article class="aa_search">

@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package NeatBootstrap
+ * @package SolidBootstrap
  */
 
 if ( ! is_active_sidebar( 'aa_sidebar_1' ) ) {

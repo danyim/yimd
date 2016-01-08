@@ -1,6 +1,6 @@
 <?php
 /**
- * @package NeatBootstrap
+ * @package SolidBootstrap
  */
 ?>
 <article class="aa_content">

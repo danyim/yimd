@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package NeatBootstrap
+ * @package SolidBootstrap
  */
 
 if ( ! function_exists( 'the_posts_navigation' ) ) :
@@ -187,9 +187,11 @@ function the_archive_description( $before = '', $after = '' ) {
 }
 endif;
 
+// Defines behavior for ending an excerpt
 function new_excerpt_more( $more ) {
-	return '...&nbsp;&nbsp;<small><em><a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Continue reading', 'neat' ) . '</a></em></small>';
+	// return '...';
 	// return ' <small><em>[ ... More ]</em></small>';
+	return '...&nbsp;&nbsp;<small><em><a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Continue reading', 'neat' ) . '</a></em></small>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 

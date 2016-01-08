@@ -4,13 +4,13 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package NeatBootstrap
+ * @package SolidBootstrap
  */
 ?>
   <div class="container-fluid footer-container footer-container-inverse">
     <div class="container">
       <footer class="footer">
-      	<p>&copy; 2015&nbsp;&nbsp;&middot;&nbsp;&nbsp;BY <a href="https://twitter.com/danyim" target="_blank">@danyim</a></p>
+      	<p>&copy; 2015&nbsp;&nbsp;&middot;&nbsp;&nbsp;BY <a href="https://twitter.com/danyim" target="_blank">danyim</a></p>
       </footer>
       <!-- /.aa_footer -->
       <?php wp_footer(); ?>

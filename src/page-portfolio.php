@@ -7,19 +7,19 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package NeatBootstrap
+ * @package SolidBootstrap
  */
 
 get_header(); ?>
 <section class="portfolio">
-	<div class="container pfl pfl-header">
+	<!-- <div class="container pfl pfl-header">
 		<div class="row aa_wrap">
 			<div class="col-md-12">
 				<h1 class="title-card">PORTFOLIO</h1>
 			</div>
 		</div>
 		<!-- /.aa_wrap -->
-	</div>
+	</div> -->
 	<div class="container-fluid pfl pfl-1">
 		<div class="container">
 			<div class="col-md-12 content content-inverse">

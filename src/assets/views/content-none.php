@@ -2,7 +2,7 @@
 /**
  * The template part for displaying a message that posts cannot be found.
  *
- * @package NeatBootstrap
+ * @package SolidBootstrap
  */
 ?>
 <section class="aa_no_results">

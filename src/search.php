@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package NeatBootstrap
+ * @package SolidBootstrap
  */
 
 get_header(); ?>

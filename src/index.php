@@ -2,7 +2,7 @@
 /**
  * The blog page.
  *
- * @package NeatBootstrap
+ * @package SolidBootstrap
  */
 
 get_header(); ?>
