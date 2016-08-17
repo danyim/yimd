@@ -12,18 +12,10 @@
 
 get_header(); ?>
 <section class="portfolio">
-	<!-- <div class="container pfl pfl-header">
-		<div class="row aa_wrap">
-			<div class="col-md-12">
-				<h1 class="title-card">PORTFOLIO</h1>
-			</div>
-		</div>
-		<!-- /.aa_wrap -->
-	</div> -->
 	<div class="container-fluid pfl pfl-1">
 		<div class="container">
 			<div class="col-md-12 content content-inverse">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac turpis ut tortor fermentum mattis at sit amet neque. Phasellus volutpat libero rhoncus libero suscipit, eu blandit lacus facilisis. In consequat urna non enim vestibulum commodo. Sed aliquet laoreet finibus. Curabitur metus ante, accumsan id sodales at, euismod ut ipsum. Praesent lobortis ac neque eu tincidunt. Donec rutrum ullamcorper ipsum, eu ultrices justo gravida eget. Suspendisse maximus augue at nisl dignissim rhoncus. Sed consectetur leo vitae felis auctor, sed accumsan enim ullamcorper. Duis dignissim ornare molestie. Nam massa mi, feugiat sed sollicitudin at, hendrerit ac sapien. Sed placerat orci id metus scelerisque rutrum.</p>
+				<p>HelloLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac turpis ut tortor fermentum mattis at sit amet neque. Phasellus volutpat libero rhoncus libero suscipit, eu blandit lacus facilisis. In consequat urna non enim vestibulum commodo. Sed aliquet laoreet finibus. Curabitur metus ante, accumsan id sodales at, euismod ut ipsum. Praesent lobortis ac neque eu tincidunt. Donec rutrum ullamcorper ipsum, eu ultrices justo gravida eget. Suspendisse maximus augue at nisl dignissim rhoncus. Sed consectetur leo vitae felis auctor, sed accumsan enim ullamcorper. Duis dignissim ornare molestie. Nam massa mi, feugiat sed sollicitudin at, hendrerit ac sapien. Sed placerat orci id metus scelerisque rutrum.</p>
 
 				<p>Etiam ligula risus, fringilla hendrerit posuere in, tincidunt dictum leo. Donec maximus eros at tincidunt ullamcorper. Quisque nec sodales felis. Fusce vehicula nisi a aliquet semper. Morbi vulputate gravida ultrices. In gravida lobortis velit, a facilisis tellus porta vitae. Sed a cursus sem, ac aliquet enim. In fermentum dignissim vehicula. Quisque eleifend sapien vitae dapibus consequat. Suspendisse nec finibus nunc. Aenean leo sapien, tempor ac dignissim in, gravida sit amet tortor. Cras non mauris in tortor aliquam venenatis.</p>
 			</div>

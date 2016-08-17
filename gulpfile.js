@@ -355,17 +355,17 @@ gulp.task('ftp', function () {
 
 // Package Distributable Theme
 gulp.task('build', ['styles', 'vendorsJs', 'scriptsJs', 'images', 'fonts', 'buildFiles'], function(cb) {
-    // var vendorJsFilter = $.filter(['assets/js/vendors.js'], {restore: true});
+    var vendorJsFilter = $.filter(['assets/js/vendors.js'], {restore: true});
 
-    // return gulp.src(temp + '/**/*')
-        // .pipe(vendorJsFilter)
-        // .pipe($.debug())
-        // // Minify all the JS
-        // .pipe($.concat('vendor.min.js'))
-        // .pipe($.uglify())
-        // // .pipe(gulp.dest(temp + '/assets/js/'))
-        // .pipe(vendorJsFilter.restore)
-        // .pipe(gulp.dest('dist'));
+    return gulp.src(temp + '/**/*')
+        .pipe(vendorJsFilter)
+        .pipe($.debug())
+        // Minify all the JS
+        .pipe($.concat('vendor.min.js'))
+        .pipe($.uglify())
+        // .pipe(gulp.dest(temp + '/assets/js/'))
+        .pipe(vendorJsFilter.restore)
+        .pipe(gulp.dest('dist'));
 });
 gulp.task('build:zip', ['build', 'zip']);
 gulp.task('build:ftp', ['build', 'ftp']);

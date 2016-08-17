@@ -1,11 +1,13 @@
 {
-  "name": "neatBootstrap",
+  "name": "yimd-theme",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/danyim/advanced-gulp-wordpress"
+    "url": "https://github.com/danyim/yimd.git"
   },
-  "license": "SEE LICENSE IN LICENSE",
+  "author": "Daniel Yim",
+  "license": "MIT",
+  "homepage": "http://yimd.net",
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.4.0",

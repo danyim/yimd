@@ -195,6 +195,11 @@ nav.post-navigation {
     background-image: url('https://images.unsplash.com/photo-1442406964439-e46ab8eff7c4?q=80&fm=jpg&s=7728059c0751fd7df335656ba33789d3');
     background-size: cover;
     background-position: center center;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
   }
   .pfl-2 { // Just an exmaple of what's possible
     background-color: lighten(blue, 50);
