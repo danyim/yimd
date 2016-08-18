@@ -12,38 +12,96 @@
 
 get_header(); ?>
 <section class="portfolio">
-	<div class="container-fluid pfl pfl-1">
-		<div class="container">
-			<div class="col-md-12 content content-inverse">
-				<p>HelloLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac turpis ut tortor fermentum mattis at sit amet neque. Phasellus volutpat libero rhoncus libero suscipit, eu blandit lacus facilisis. In consequat urna non enim vestibulum commodo. Sed aliquet laoreet finibus. Curabitur metus ante, accumsan id sodales at, euismod ut ipsum. Praesent lobortis ac neque eu tincidunt. Donec rutrum ullamcorper ipsum, eu ultrices justo gravida eget. Suspendisse maximus augue at nisl dignissim rhoncus. Sed consectetur leo vitae felis auctor, sed accumsan enim ullamcorper. Duis dignissim ornare molestie. Nam massa mi, feugiat sed sollicitudin at, hendrerit ac sapien. Sed placerat orci id metus scelerisque rutrum.</p>
-
-				<p>Etiam ligula risus, fringilla hendrerit posuere in, tincidunt dictum leo. Donec maximus eros at tincidunt ullamcorper. Quisque nec sodales felis. Fusce vehicula nisi a aliquet semper. Morbi vulputate gravida ultrices. In gravida lobortis velit, a facilisis tellus porta vitae. Sed a cursus sem, ac aliquet enim. In fermentum dignissim vehicula. Quisque eleifend sapien vitae dapibus consequat. Suspendisse nec finibus nunc. Aenean leo sapien, tempor ac dignissim in, gravida sit amet tortor. Cras non mauris in tortor aliquam venenatis.</p>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid pfl pfl-2">
-		<div class="container">
-			<div class="col-md-12 content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac turpis ut tortor fermentum mattis at sit amet neque. Phasellus volutpat libero rhoncus libero suscipit, eu blandit lacus facilisis. In consequat urna non enim vestibulum commodo. Sed aliquet laoreet finibus. Curabitur metus ante, accumsan id sodales at, euismod ut ipsum. Praesent lobortis ac neque eu tincidunt. Donec rutrum ullamcorper ipsum, eu ultrices justo gravida eget. Suspendisse maximus augue at nisl dignissim rhoncus. Sed consectetur leo vitae felis auctor, sed accumsan enim ullamcorper. Duis dignissim ornare molestie. Nam massa mi, feugiat sed sollicitudin at, hendrerit ac sapien. Sed placerat orci id metus scelerisque rutrum.</p>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid pfl pfl-3">
-		<div class="container">
-			<div class="col-md-12 content">
-				<p>Etiam ligula risus, fringilla hendrerit posuere in, tincidunt dictum leo. Donec maximus eros at tincidunt ullamcorper. Quisque nec sodales felis. Fusce vehicula nisi a aliquet semper. Morbi vulputate gravida ultrices. In gravida lobortis velit, a facilisis tellus porta vitae. Sed a cursus sem, ac aliquet enim. In fermentum dignissim vehicula. Quisque eleifend sapien vitae dapibus consequat. Suspendisse nec finibus nunc. Aenean leo sapien, tempor ac dignissim in, gravida sit amet tortor. Cras non mauris in tortor aliquam venenatis.</p>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid pfl pfl-4">
-		<div class="container">
-			<div class="col-md-12 content content-inverse">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac turpis ut tortor fermentum mattis at sit amet neque. Phasellus volutpat libero rhoncus libero suscipit, eu blandit lacus facilisis. In consequat urna non enim vestibulum commodo. Sed aliquet laoreet finibus. Curabitur metus ante, accumsan id sodales at, euismod ut ipsum. Praesent lobortis ac neque eu tincidunt. Donec rutrum ullamcorper ipsum, eu ultrices justo gravida eget. Suspendisse maximus augue at nisl dignissim rhoncus. Sed consectetur leo vitae felis auctor, sed accumsan enim ullamcorper. Duis dignissim ornare molestie. Nam massa mi, feugiat sed sollicitudin at, hendrerit ac sapien. Sed placerat orci id metus scelerisque rutrum.</p>
-
-				<p>Etiam ligula risus, fringilla hendrerit posuere in, tincidunt dictum leo. Donec maximus eros at tincidunt ullamcorper. Quisque nec sodales felis. Fusce vehicula nisi a aliquet semper. Morbi vulputate gravida ultrices. In gravida lobortis velit, a facilisis tellus porta vitae. Sed a cursus sem, ac aliquet enim. In fermentum dignissim vehicula. Quisque eleifend sapien vitae dapibus consequat. Suspendisse nec finibus nunc. Aenean leo sapien, tempor ac dignissim in, gravida sit amet tortor. Cras non mauris in tortor aliquam venenatis.</p>
-			</div>
-		</div>
-	</div>
+    <div class="portfolio-item">
+        <figure style="background-image: url('http://yimd.net/wp-content/uploads/2016/08/indecks-1024x672.png');">
+        </figure>
+        <figcaption>
+            <h4>indecks <a href="https://github.com/danyim/indecks" target="_blank"><i class="fa fa-github"></i></a></h4>
+            <p>Interactive index card study aid built with ReactJS</p>
+        </figcaption>
+    </div>
+    <div class="portfolio-item">
+        <figure>
+            <h4 class="ital">
+                <span class="grey">COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON</span>
+                COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON
+                <span class="grey">COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON</span>
+                COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON
+                <span class="grey">COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON</span>
+                COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON
+                <span class="grey">COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON</span>
+                COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON
+                <span class="grey">COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON</span>
+                COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON
+                <span class="grey">COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON</span>
+                COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON
+                <span class="grey">COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON</span>
+                <!-- <span class="grey">COMING SOON</span> COMING SOON COMING SOON COMING SOON COMING SOON
+                COMING SOON <span class="grey">COMING SOON</span> COMING SOON COMING SOON COMING SOON
+                COMING SOON COMING SOON <span class="grey">COMING SOON</span> COMING SOON COMING SOON
+                COMING SOON COMING SOON COMING SOON <span class="grey">COMING SOON</span> COMING SOON
+                COMING SOON COMING SOON COMING SOON COMING SOON <span class="grey">COMING SOON</span>
+                COMING SOON COMING SOON COMING SOON <span class="grey">COMING SOON</span> COMING SOON
+                COMING SOON COMING SOON <span class="grey">COMING SOON</span> COMING SOON COMING SOON
+                COMING SOON <span class="grey">COMING SOON</span> COMING SOON COMING SOON COMING SOON
+                <span class="grey">COMING SOON</span> COMING SOON COMING SOON COMING SOON COMING SOON
+                COMING SOON <span class="grey">COMING SOON</span> COMING SOON COMING SOON COMING SOON
+                COMING SOON COMING SOON <span class="grey">COMING SOON</span> COMING SOON COMING SOON
+                COMING SOON COMING SOON COMING SOON <span class="grey">COMING SOON</span> COMING SOON
+                COMING SOON COMING SOON COMING SOON COMING SOON <span class="grey">COMING SOON</span> -->
+            </h4>
+        </figure>
+        <figcaption>
+            <h4>
+                ARTGORITHMS
+                <a href="https://github.com/danyim/artgorithms" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+            </h4>
+            <p>A design & art project, to be released soon</p>
+        </figcaption>
+    </div>
+    <div class="portfolio-item">
+        <figure style="background-image: url('http://yimd.net/wp-content/uploads/2016/08/consultantspeak-1024x876.png');">
+        </figure>
+        <figcaption>
+            <h4>
+                Consultant Speak
+                <a href="https://github.com/danyim/ConsultantSpeak" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+            </h4>
+            <p>Random definitions of "consultant speak" built with an Angular, Node/Express, and MongoDB</p>
+        </figcaption>
+    </div>
+    <div class="portfolio-item">
+        <figure style="background-image: url('http://yimd.net/wp-content/uploads/2016/08/gerb-1024x691.png');">
+        </figure>
+        <figcaption>
+            <h4>
+                gerb dawg
+                <a href="https://github.com/danyim/gerbdawg" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+            </h4>
+            <p>Gerb or The Big Dawg--which are you? Made with love using Angular and Firebase</p>
+        </figcaption>
+    </div>
+    <div class="portfolio-item">
+        <figure style="background-image: url('http://yimd.net/wp-content/uploads/2016/08/bao-1024x984.png');">
+        </figure>
+        <figcaption>
+            <h4>
+                Breaking Bao
+                <a href="https://github.com/danyim/breaking-bao" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+            </h4>
+            <p>
+                Public website for a food truck concept, built in Angular and powered by Wordpress for the CMS
+            </p>
+        </figcaption>
+    </div>
 </section>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
