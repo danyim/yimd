@@ -18,8 +18,9 @@ get_header(); ?>
             <div class="badges">
                 <a href="https://twitter.com/danyim" target="_blank"><i class="fa fa-twitter"></i></a>
                 <a href="https://www.linkedin.com/in/danielyim" target="_blank"><i class="fa fa-linkedin"></i></a>
-                <a href="https://github.com/danyim" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://angel.co/danyim" target="_blank"><i class="fa fa-angellist"></i></a>
                 <a href="https://stackoverflow.com/users/350951/danyim" target="_blank"><i class="fa fa-stack-overflow"></i></a>
+                <a href="https://github.com/danyim" target="_blank"><i class="fa fa-github"></i></a>
                 <a href="https://bitbucket.com/danyim" target="_blank"><i class="fa fa-bitbucket"></i></a>
             </div>
         </div>
