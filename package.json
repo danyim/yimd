@@ -1,6 +1,9 @@
 {
   "name": "yimd-theme",
   "version": "1.0.0",
+  "scripts": {
+    "ftp": "gulp clean && gulp build && gulp ftp"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/danyim/yimd.git"
