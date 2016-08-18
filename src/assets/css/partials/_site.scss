@@ -243,6 +243,7 @@ nav.post-navigation {
   margin: 2.0rem 0;
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
   font-size: 1.1rem;
 
   // General stuff within resume
@@ -252,6 +253,9 @@ nav.post-navigation {
     margin: 1.4rem 1.6rem 0.8rem 0;
     padding: 0.6rem 1.0rem;
     padding-top: 0;
+  }
+  section:last-child {
+    margin-right: 0;
   }
   .heading {
     h2 {
@@ -319,6 +323,9 @@ nav.post-navigation {
   }
   .experience {
 
+    li {
+      list-style-type: none;
+    }
   }
   .education {
   }

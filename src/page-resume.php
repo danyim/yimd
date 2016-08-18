@@ -64,6 +64,12 @@ get_header(); ?>
         </section>
         <section class="experience">
             <div class="heading"><h2>Experience</h2></div>
+            <ul>
+                <li>Pariveda Solutions, 2014-2016</li>
+                <li>Mach Interview, 2013-2014</li>
+                <li>AIG, 2011-2014</li>
+                <li>Columbia Regional Geospatial Service Center, 2010-2011</li>
+            </ul>
             <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -71,8 +77,8 @@ get_header(); ?>
         </section>
         <section class="education">
             <div class="heading"><h2>Education</h2></div>
-            <p><strong>B.S. in Computer Science with minor in Mathematics</strong></p>
-            <p>Stephen F. Austin State University</p>
+            <p>B.S. in Computer Science with minor in Mathematics</p>
+            <p><strong>Stephen F. Austin State University, 2007-2011</strong></p>
         </section>
     </div>
 </section>
