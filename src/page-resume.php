@@ -17,7 +17,7 @@ get_header(); ?>
             <h1>Daniel D. Yim</h1>
             <div class="badges">
                 <a href="https://twitter.com/danyim" target="_blank"><i class="fa fa-twitter"></i></a>
-                <a href="https://linkedin.com/danielyim" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/danielyim" target="_blank"><i class="fa fa-linkedin"></i></a>
                 <a href="https://github.com/danyim" target="_blank"><i class="fa fa-github"></i></a>
                 <a href="https://stackoverflow.com/users/350951/danyim" target="_blank"><i class="fa fa-stack-overflow"></i></a>
                 <a href="https://bitbucket.com/danyim" target="_blank"><i class="fa fa-bitbucket"></i></a>
