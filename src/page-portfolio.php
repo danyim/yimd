@@ -63,7 +63,7 @@ get_header(); ?>
             </figcaption>
         </div>
         <div class="portfolio-item">
-            <figure style="background-image: url('http://yimd.net/wp-content/uploads/2016/08/consultantspeak-1024x876.png');">
+            <figure style="background-image: url('http://yimd.net/wp-content/uploads/2016/08/cspeak-661x1024.png');">
             </figure>
             <figcaption>
                 <h4>
