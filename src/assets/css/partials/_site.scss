@@ -174,7 +174,14 @@ nav.post-navigation {
 //   width: 89%;
 // }
 
+.portfolio-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
 .portfolio {
+  max-width: 1120px;
   margin: 2.0rem 0;
   display: flex;
   flex-flow: row wrap;
@@ -219,7 +226,7 @@ nav.post-navigation {
       flex: 0 0 25%;
       font-size: 1.0rem;
       border-top: 1px solid #DEDEDE;
-      margin: 0.4rem 0.8rem 0.8rem 0.8rem;
+      margin: 0 0.8rem;
     }
     &:hover {
       border: 1px black #DEDEDE;
