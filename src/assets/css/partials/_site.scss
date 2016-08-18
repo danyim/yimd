@@ -177,6 +177,9 @@ nav.post-navigation {
 .flex-container {
   display: flex;
   flex-flow: row nowrap;
+}
+
+.flex-center {
   justify-content: center;
 }
 
@@ -232,6 +235,92 @@ nav.post-navigation {
       border: 1px black #DEDEDE;
       // transform: scale(1.05,1.05);
     }
+  }
+}
+
+.resume {
+  max-width: 1120px;
+  margin: 2.0rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 1.1rem;
+
+  // General stuff within resume
+  section {
+    flex: 1 0 47%;
+    border: 1px solid black;
+    margin: 1.4rem 1.6rem 0.8rem 0;
+    padding: 0.6rem 1.0rem;
+    padding-top: 0;
+  }
+  .heading {
+    h2 {
+      font-family: $f2_lit;
+      font-weight: 300;
+      font-size: 1.5rem;
+      // font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+      display: inline;
+      position: relative;
+      top: -0.8rem;
+      background-color: white;
+      padding: 0 0.6rem 0 0.6rem;
+    }
+  }
+  // end general
+
+  .header {
+    flex-basis: 100%;
+    margin-bottom: 1.0rem;
+    h1 {
+      font-family: $f6_lit;
+      font-size: 4.0rem;
+      text-transform: uppercase;
+      letter-spacing: -0.2rem;
+      text-align: center;
+    }
+    .badges {
+      font-size: 1.7rem;
+      text-align: center;
+      & > a {
+        margin-right: 0.6rem;
+      }
+    }
+  }
+
+  .skills {
+    flex-basis: 100%;
+
+    .split {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      margin-bottom: 1.5rem;
+      & > *:first-child {
+        border-left: none;
+      }
+      & > * {
+        flex: 1 0 32%;
+        border-left: 1px solid #DEDEDE;
+      }
+      h3 {
+        text-align: center;
+        font-family: $f2_lit;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      li {
+        font-size: 1.0rem;
+        list-style-type: none;
+        text-align: center;
+      }
+    }
+  }
+  .experience {
+
+  }
+  .education {
   }
 }
 
