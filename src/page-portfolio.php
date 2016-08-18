@@ -11,7 +11,7 @@
  */
 
 get_header(); ?>
-<section class="container portfolio-container">
+<section class="container flex-container">
     <div class="portfolio">
         <div class="portfolio-item">
             <figure style="background-image: url('http://yimd.net/wp-content/uploads/2016/08/indecks-1024x672.png');">
