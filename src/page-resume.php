@@ -66,10 +66,18 @@ get_header(); ?>
         <section class="experience">
             <div class="heading"><h2>Experience</h2></div>
             <ul>
-                <li>Pariveda Solutions, 2014-2016</li>
-                <li>Mach Interview, 2013-2014</li>
-                <li>AIG, 2011-2014</li>
-                <li>Columbia Regional Geospatial Service Center, 2010-2011</li>
+                <li>
+                    <strong>Software Consultant</strong> @ Pariveda Solutions, 2014-2016
+                </li>
+                <li>
+                    <strong>Lead Developer</strong> @ Mach Interview, 2013-2014
+                </li>
+                <li>
+                    <strong>Developer III</strong> @ AIG, 2011-2014
+                </li>
+                <li>
+                    <strong>Student Programmer</strong> @ Columbia Regional Geospatial Service Center, 2010-2011
+                </li>
             </ul>
             <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
