@@ -325,6 +325,13 @@ nav.post-navigation {
 
     li {
       list-style-type: none;
+
+      strong {
+        font-family: $f2_lit;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
     }
   }
   .education {
