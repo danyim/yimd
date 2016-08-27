@@ -17,7 +17,10 @@ get_header(); ?>
             <figure style="background-image: url('http://yimd.net/wp-content/uploads/2016/08/indecks-1024x672.png');">
             </figure>
             <figcaption>
-                <h4>indecks <a href="https://github.com/danyim/indecks" target="_blank"><i class="fa fa-github"></i></a></h4>
+                <h4>
+                    <a href="https://danyim.github.io/indecks/" target="_blank">indecks</a>
+                    <a href="https://github.com/danyim/indecks" target="_blank"><i class="fa fa-github"></i></a>
+                </h4>
                 <p>Interactive index card study aid built with ReactJS</p>
             </figcaption>
         </div>
@@ -26,7 +29,10 @@ get_header(); ?>
             <figure style="background-image: url('http://yimd.net/wp-content/uploads/2016/08/yotta-991x1024.png');">
             </figure>
             <figcaption>
-                <h4>yotta-url <a href="https://github.com/danyim/yotta-url" target="_blank"><i class="fa fa-github"></i></a></h4>
+                <h4>
+                    <a href="https://yotta-url.herokuapp.com/" target="_blank">yotta-url</a>
+                    <a href="https://github.com/danyim/yotta-url" target="_blank"><i class="fa fa-github"></i></a>
+                </h4>
                 <p>A URL expander microservice built in NodeJS</p>
             </figcaption>
         </div>
@@ -77,7 +83,7 @@ get_header(); ?>
             </figure>
             <figcaption>
                 <h4>
-                    Consultant Speak
+                    <a href="http://jargon.yimd.net/" target="_blank">Consultant Speak</a>
                     <a href="https://github.com/danyim/ConsultantSpeak" target="_blank">
                         <i class="fa fa-github"></i>
                     </a>
@@ -90,7 +96,7 @@ get_header(); ?>
             </figure>
             <figcaption>
                 <h4>
-                    gerb dawg
+                    <a href="https://gerbdawg.herokuapp.com/" target="_blank">gerb dawg</a>
                     <a href="https://github.com/danyim/gerbdawg" target="_blank">
                         <i class="fa fa-github"></i>
                     </a>
@@ -103,7 +109,7 @@ get_header(); ?>
             </figure>
             <figcaption>
                 <h4>
-                    Breaking Bao
+                    <a href="http://breakingbao.com/" target="_blank">Breaking Bao</a>
                     <a href="https://github.com/danyim/breaking-bao" target="_blank">
                         <i class="fa fa-github"></i>
                     </a>
