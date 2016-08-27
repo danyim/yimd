@@ -327,9 +327,10 @@ nav.post-navigation {
       list-style-type: none;
 
       strong {
-        font-family: $f2_lit;
-        font-weight: bold;
+        font-family: $f1_lit;
+        font-weight: 600;
         font-size: 1.2rem;
+        letter-spacing: -0.08rem;
         text-transform: uppercase;
       }
     }
@@ -353,6 +354,10 @@ nav.post-navigation {
       @extend .__ext_posted_on;
       font-family: $f1_lit;
     }
+  }
+
+  article.aa_content {
+    margin: 1.0rem 0 2.0rem 0;
   }
   .content {
     @extend .__ext_body-serif;
@@ -446,7 +451,7 @@ nav.post-navigation {
   font: normal 900 2.80rem/1.0 $f6_lit;
   letter-spacing: -0.06rem;
   text-align: center;
-  margin-bottom: 1.0em;
+  margin-bottom: 1.0rem;
   a {
     color: $b;
     text-decoration: none;

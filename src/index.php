@@ -35,7 +35,7 @@ get_header(); ?>
 	<!-- /.aa_wrap -->
 </div>
 
-	<div class="aa_wrap hidden">
+	<!-- <div class="aa_wrap hidden">
 		<div id="about" class="row aa_index">
 			<div class="col-md-12 aa_content__content">
 				<p>Bacon ipsum dolor amet velit swine turducken shankle, ut sunt et voluptate pork adipisicing biltong. Prosciutto beef excepteur, duis ham ut pig consectetur. Irure brisket porchetta, aliquip nisi shoulder ball tip flank tempor duis. Non in velit aute pig. Aliqua pig esse, fatback prosciutto dolor in tempor ball tip do. Jerky flank eu, cillum cupidatat picanha pork belly t-bone drumstick pork loin qui.</p>
@@ -60,7 +60,7 @@ get_header(); ?>
 				<p>Does your lorem ipsum text long for something a little meatier? Give our generator a try… it’s tasty!</p>
 			</div>
 		</div>
-	</div>
+	</div> -->
 </div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

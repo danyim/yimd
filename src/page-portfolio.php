@@ -21,6 +21,16 @@ get_header(); ?>
                 <p>Interactive index card study aid built with ReactJS</p>
             </figcaption>
         </div>
+
+        <div class="portfolio-item">
+            <figure style="background-image: url('http://yimd.net/wp-content/uploads/2016/08/yotta-991x1024.png');">
+            </figure>
+            <figcaption>
+                <h4>yotta-url <a href="https://github.com/danyim/yotta-url" target="_blank"><i class="fa fa-github"></i></a></h4>
+                <p>A URL expander microservice built in NodeJS</p>
+            </figcaption>
+        </div>
+
         <div class="portfolio-item">
             <figure>
                 <h4 class="ital">
