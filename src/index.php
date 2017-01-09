@@ -60,7 +60,7 @@ get_header(); ?>
 				<p>Does your lorem ipsum text long for something a little meatier? Give our generator a try… it’s tasty!</p>
 			</div>
 		</div>
-	</div> -->
-</div>
+	</div>
+</div> -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

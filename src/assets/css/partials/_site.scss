@@ -38,10 +38,10 @@
       height: 0;
       background-color: $c-nav-highlight-bg;
       content: "";
-      transition: height 0.2s;
+      transition: width 0.2s ease-in-out;
     }
     li:hover:after, li.active:after  {
-      height: 3px;
+      width: 30%;
     }
     li.current-menu-item {
       // opacity: 0.2;
@@ -56,7 +56,7 @@
       margin-left: 0;
       background-color: $c-nav-highlight;
       content: "";
-      transition: width 0.2s, margin 0.2s;
+      transition: width 0.2s ease-in-out, margin 0.2s;
     }
     li.current-menu-item:hover:after {
         width: 30%;

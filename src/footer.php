@@ -10,7 +10,7 @@
   <div class="container-fluid footer-container footer-container-inverse">
     <div class="container">
       <footer class="footer">
-      	<p>&copy; 2016&nbsp;&nbsp;&middot;&nbsp;&nbsp;BY <a href="https://twitter.com/danyim" target="_blank">danyim</a></p>
+      	<p>&copy; <?= date('Y') ?>&nbsp;&nbsp;&middot;&nbsp;&nbsp;BY <a href="https://twitter.com/danyim" target="_blank">danyim</a></p>
       </footer>
       <!-- /.aa_footer -->
       <?php wp_footer(); ?>
