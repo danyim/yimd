@@ -11,6 +11,9 @@
   "author": "Daniel Yim",
   "license": "MIT",
   "homepage": "http://yimd.net",
+  "engines": {
+    "node" : ">=0.10.3 <=0.12"
+  },
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.4.0",
