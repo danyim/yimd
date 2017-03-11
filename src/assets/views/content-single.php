@@ -11,12 +11,17 @@
 ?>
 
 <article class="aa_single">
-	<div class="jumbotron background-cover" style="background-image: url('<?=$url?>');">
-		<div class="container">
-			<div></div>
-		</div>
-	</div>
-
+<?php
+    if($url != NULL) {
+?>
+    <div class="jumbotron background-cover" style="background-image: url('<?=$url?>');">
+        <div class="container">
+            <div></div>
+        </div>
+    </div>
+<?php
+    }
+?>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 text-center">
