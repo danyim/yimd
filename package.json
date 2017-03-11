@@ -2,7 +2,8 @@
   "name": "yimd-theme",
   "version": "1.0.0",
   "scripts": {
-    "ftp": "gulp clean && gulp build && gulp ftp"
+    "start": "gulp serve",
+    "publish": "gulp clean && gulp build && gulp ftp"
   },
   "repository": {
     "type": "git",
@@ -12,7 +13,7 @@
   "license": "MIT",
   "homepage": "http://yimd.net",
   "engines": {
-    "node" : ">=0.10.3 <=0.12"
+    "node" : ">=7"
   },
   "dependencies": {},
   "devDependencies": {

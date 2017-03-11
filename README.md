@@ -1,5 +1,5 @@
-# yimd.net in Wordpress
-A modernized Gulp-based WordPress theme tailored for yimd.net
+# yimd.net Wordpress Theme
+A modernized Gulp-based WordPress theme tailored for my personal blog and website @ [http://yimd.net](http://yimd.net).
 
 ### Setup
 1. Run `npm install && bower install` in the project directory
@@ -10,9 +10,9 @@ A modernized Gulp-based WordPress theme tailored for yimd.net
 
 ### Publish via FTP
 1. Publish via FTP by editing and renaming `ftp-config.json.example` to `ftp-config.json`
-2. Run `npm run ftp` (`gulp clean && gulp build && gulp ftp`)
+2. Run `npm run publish`
 
-### Features
+### Stack
 - SCSS, Gulp
 
 ### License
