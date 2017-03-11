@@ -21,10 +21,24 @@ get_header(); ?>
                     <a href="https://danyim.github.io/indecks/" target="_blank">indecks</a>
                     <a href="https://github.com/danyim/indecks" target="_blank"><i class="fa fa-github"></i></a>
                 </h4>
-                <p>Interactive index card study aid built with ReactJS</p>
+                <p>Interactive index card deck organizer and study aid, built using React</p>
             </figcaption>
         </div>
-
+        <div class="portfolio-item">
+            <figure style="background-image: url('https://yimd.net/wp-content/uploads/2017/03/breaking-bao-1024x873.png');">
+            </figure>
+            <figcaption>
+                <h4>
+                    <a href="http://breakingbao.com/" target="_blank">Breaking Bao</a>
+                    <a href="https://github.com/danyim/breaking-bao" target="_blank">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </h4>
+                <p>
+                    Website for Houston's finest Asian-fusion buns, built using React.
+                </p>
+            </figcaption>
+        </div>
         <div class="portfolio-item">
             <figure style="background-image: url('http://yimd.net/wp-content/uploads/2016/08/yotta-991x1024.png');">
             </figure>
@@ -102,21 +116,6 @@ get_header(); ?>
                     </a>
                 </h4>
                 <p>Gerb or The Big Dawg--which are you? Made with love using Angular and Firebase</p>
-            </figcaption>
-        </div>
-        <div class="portfolio-item">
-            <figure style="background-image: url('http://yimd.net/wp-content/uploads/2016/08/bao-1024x984.png');">
-            </figure>
-            <figcaption>
-                <h4>
-                    <a href="http://breakingbao.com/" target="_blank">Breaking Bao</a>
-                    <a href="https://github.com/danyim/breaking-bao" target="_blank">
-                        <i class="fa fa-github"></i>
-                    </a>
-                </h4>
-                <p>
-                    Public website for a food truck concept, built in Angular and powered by Wordpress for the CMS
-                </p>
             </figcaption>
         </div>
     </div>

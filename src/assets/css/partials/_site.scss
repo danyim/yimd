@@ -249,6 +249,12 @@ nav.post-navigation {
   }
 }
 
+@media (max-width: 800px) {
+  .portfolio .portfolio-item {
+    flex-basis: 100%;
+  }
+}
+
 .resume {
   max-width: 1120px;
   margin: 2.0rem 0;
