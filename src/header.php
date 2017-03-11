@@ -19,28 +19,28 @@
 <body <?php body_class(); ?> data-spy="scroll" data-target="#navspy">
 	<header class="aa_navigation">
 		<nav class="navbar aa_nav">
-      <div class="container">
+          <div class="container">
   			<!-- <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">hellloo navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">yimd</a>
-        </div> -->
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">hellloo navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">yimd</a>
+            </div> -->
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <?php
-            wp_nav_menu( array(
-              'theme_location' => 'primary',
-              'menu_id' => 'primary-menu',
-              'container_id' => 'navbar',
-              'items_wrap' => '<ul id="%1$s" class="%2$s nav">%3$s</ul>',
-            ) );
-          ?>
-        </div>
-      </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <?php
+                wp_nav_menu( array(
+                  'theme_location' => 'primary',
+                  'menu_id' => 'primary-menu',
+                  'container_id' => 'navbar',
+                  'items_wrap' => '<ul id="%1$s" class="%2$s nav">%3$s</ul>',
+                ) );
+              ?>
+            </div>
+          </div>
 		</nav>
     <!--
     Floating nav with navspy

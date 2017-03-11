@@ -34,17 +34,24 @@
       position: absolute;
       left: 0;
       bottom: -3px;
-      width: 100%;
+      width: 30%;
+      margin-left: 30%;
       height: 0;
       background-color: $c-nav-highlight-bg;
       content: "";
       transition: width 0.2s ease-in-out;
     }
     li:hover:after, li.active:after  {
-      width: 30%;
+      width: 100%;
+      margin-left: 0%;
+      height: 3px;
     }
     li.current-menu-item {
-      // opacity: 0.2;
+      opacity: 1;
+      background-color: $c-nav-highlight;
+      a {
+        color: white;
+      }
     }
     li.current-menu-item:after {
       display: block;
@@ -58,10 +65,10 @@
       content: "";
       transition: width 0.2s ease-in-out, margin 0.2s;
     }
-    li.current-menu-item:hover:after {
-        width: 30%;
-        margin-left: 35%; // (Original width - final width) / 2
-    }
+    // li.current-menu-item:hover:after {
+    //     width: 30%;
+    //     margin-left: 30%; // (Original width - final width) / 2
+    // }
     //////////////// end nav transitions
 
     li {
