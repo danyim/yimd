@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<div class="jumbotron cover">
+<!-- <div class="jumbotron cover">
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-sm-12">
@@ -18,7 +18,7 @@ get_header(); ?>
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="container">
 	<div class="row aa_wrap">
