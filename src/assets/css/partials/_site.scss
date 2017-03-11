@@ -350,6 +350,13 @@ nav.post-navigation {
   }
 }
 
+// Category listing styles
+.aa_wrap .aa_no_results  {
+  .content-title {
+    margin-bottom: 5rem;
+  }
+}
+
 // Root style for all pages
 .aa_wrap {
   margin: 1.0rem 0 3.0rem 0;
@@ -421,13 +428,13 @@ nav.post-navigation {
         }
       }
     }
-    .search-form {
-      .screen-reader-text {
-        font: normal 300 0.80rem $f1_lit;
-        text-transform: uppercase;
-      }
-    }
   }
+}
+
+// Search box styles
+.search-form {
+  font: normal 300 0.80rem $f1_lit;
+  text-transform: uppercase;
 }
 
 // Inverse sidebar and footer styles
@@ -469,9 +476,9 @@ nav.post-navigation {
   }
 }
 .__ext_base_subtitle {
-  font: normal 300 1.2rem/1.0 $f6_lit;
-  text-transform: uppercase;
-  letter-spacing: -0.06rem;
+  font: normal 300 1.1rem/1.0 $f6_lit;
+  // text-transform: uppercase;
+  letter-spacing: -0.04rem;
   margin-bottom: 1.0em;
 }
 .__ext_body-serif {

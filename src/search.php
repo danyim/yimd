@@ -10,9 +10,9 @@ get_header(); ?>
 	<div class="row aa_wrap">
 		<div class="col-md-10 col-md-offset-1">
 			<?php if ( have_posts() ) : ?>
-				<div class="aa_header well">
+				<div class="aa_header well m-b">
 					<h4 class="content-header-small">
-						<?php printf( 'Displaying search results for <strong>%s</strong>', '<span>' . get_search_query() . '</span>' ); ?>
+						<?php printf( 'Displaying search results for:&nbsp;&nbsp;%s', '<span>' . get_search_query() . '</span>' ); ?>
 					</h4>
 					<!-- /.aa_h1 -->
 				</div>

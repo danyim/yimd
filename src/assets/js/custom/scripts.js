@@ -1,7 +1,7 @@
 /**
  * scripts.js
  */
-$(document).ready(function() {
+// $(document).ready(function() {
     // var myElement = document.querySelector(".aa_navigation");
     // // construct an instance of Headroom, passing the element
     // var headroom  = new Headroom(myElement,
@@ -10,4 +10,4 @@ $(document).ready(function() {
     //     tolerance: 5
     // });
     // headroom.init();
-});
+// });
