@@ -35,22 +35,23 @@
       left: 0;
       bottom: -3px;
       width: 30%;
-      margin-left: 30%;
-      height: 0;
-      background-color: $c-nav-highlight-bg;
+      margin-left: 35%;
+      height: 0px;
+      background-color: $c-nav-highlight;
       content: "";
-      transition: width 0.2s ease-in-out;
+      transition: width 0.2s ease-in-out, margin-left 0.2s ease-in-out;
     }
     li:hover:after, li.active:after  {
       width: 100%;
-      margin-left: 0%;
       height: 3px;
+      margin-left: 0%;
     }
     li.current-menu-item {
       opacity: 1;
       background-color: $c-nav-highlight;
       a {
         color: white;
+        font-weight: bold;
       }
     }
     li.current-menu-item:after {
@@ -65,10 +66,11 @@
       content: "";
       transition: width 0.2s ease-in-out, margin 0.2s;
     }
-    // li.current-menu-item:hover:after {
-    //     width: 30%;
-    //     margin-left: 30%; // (Original width - final width) / 2
-    // }
+    li.current-menu-item:hover:after {
+        width: 100%;
+        background-color: $c-nav-highlight;
+        // margin-left: 30%; // (Original width - final width) / 2
+    }
     //////////////// end nav transitions
 
     li {
@@ -77,7 +79,6 @@
       // On the fence about having this fixed width
       // width: 5.0rem;
       margin: 0 0.40rem 0 0;
-      // background-color: #fff;
 
       :hover {
         text-decoration: none;
@@ -86,7 +87,6 @@
       }
       a {
         font-family: $f2_lit;
-        // font-family: $f8_lit;
         text-transform: uppercase;
         font-size: 1.00rem;
         display: block;
@@ -108,6 +108,10 @@
       }
     }
   }
+}
+
+.navbar-header .navbar-brand {
+  font: normal 800 2.2rem/1.0 $f6_lit;
 }
 
 nav.post-navigation {
