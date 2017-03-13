@@ -52,7 +52,9 @@ get_header(); ?>
         </div>
 
         <div class="portfolio-item">
-            <figure>
+            <figure style="background-image: url('https://yimd.net/wp-content/uploads/2017/03/artgorithms-1024x748.png');">
+            </figure>
+            <!-- <figure>
                 <h4 class="ital">
                     <span class="grey">COMING SOON COMING SOON COMING SOON COMING SOON</span>
                     COMING SOON COMING SOON COMING SOON COMING SOON
@@ -67,29 +69,16 @@ get_header(); ?>
                     <span class="grey">COMING SOON COMING SOON COMING SOON COMING SOON</span>
                     COMING SOON COMING SOON COMING SOON COMING SOON
                     <span class="grey">COMING SOON COMING SOON COMING SOON COMING SOON</span>
-                    <!-- <span class="grey">COMING SOON</span> COMING SOON COMING SOON COMING SOON COMING SOON
-                    COMING SOON <span class="grey">COMING SOON</span> COMING SOON COMING SOON COMING SOON
-                    COMING SOON COMING SOON <span class="grey">COMING SOON</span> COMING SOON COMING SOON
-                    COMING SOON COMING SOON COMING SOON <span class="grey">COMING SOON</span> COMING SOON
-                    COMING SOON COMING SOON COMING SOON COMING SOON <span class="grey">COMING SOON</span>
-                    COMING SOON COMING SOON COMING SOON <span class="grey">COMING SOON</span> COMING SOON
-                    COMING SOON COMING SOON <span class="grey">COMING SOON</span> COMING SOON COMING SOON
-                    COMING SOON <span class="grey">COMING SOON</span> COMING SOON COMING SOON COMING SOON
-                    <span class="grey">COMING SOON</span> COMING SOON COMING SOON COMING SOON COMING SOON
-                    COMING SOON <span class="grey">COMING SOON</span> COMING SOON COMING SOON COMING SOON
-                    COMING SOON COMING SOON <span class="grey">COMING SOON</span> COMING SOON COMING SOON
-                    COMING SOON COMING SOON COMING SOON <span class="grey">COMING SOON</span> COMING SOON
-                    COMING SOON COMING SOON COMING SOON COMING SOON <span class="grey">COMING SOON</span> -->
                 </h4>
-            </figure>
+            </figure> -->
             <figcaption>
                 <h4>
-                    ARTGORITHMS
+                    <a href="http://artgorithms.s3-website-us-west-2.amazonaws.com/" target="_blank">ARTGORITHMS</a>
                     <a href="https://github.com/danyim/artgorithms" target="_blank">
                         <i class="fa fa-github"></i>
                     </a>
                 </h4>
-                <p>A design & art project, to be released soon</p>
+                <p>A design &amp; art project; minimalist paintings recreated in code. Made in React and Web Canvas API.</p>
             </figcaption>
         </div>
         <div class="portfolio-item">
