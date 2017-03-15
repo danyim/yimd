@@ -23,7 +23,7 @@ add_action('wp_enqueue_scripts', 'aa_scripts');
 function aa_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
-    	wp_enqueue_script('jquery'); // Enqueue it!
+      wp_enqueue_script('jquery'); // Enqueue it!
         //wp_deregister_script('jquery'); // Deregister WordPress jQuery
         //wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array(), '1.11.2');
 

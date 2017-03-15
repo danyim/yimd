@@ -6,7 +6,7 @@
  */
 
 if ( ! is_active_sidebar( 'aa_sidebar_1' ) ) {
-	return;
+  return;
 }
 ?>
 

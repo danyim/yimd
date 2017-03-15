@@ -17,10 +17,10 @@
 </head>
 
 <body <?php body_class(); ?> data-spy="scroll" data-target="#navspy">
-	<header class="aa_navigation">
-		<nav class="navbar aa_nav">
+  <header class="aa_navigation">
+    <nav class="navbar aa_nav">
           <div class="container">
-  			<!-- <div class="navbar-header">
+        <!-- <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">hellloo navigation</span>
                 <span class="icon-bar"></span>
@@ -41,7 +41,7 @@
               ?>
             </div>
           </div>
-		</nav>
+    </nav>
     <!--
     Floating nav with navspy
     <nav class="navbar navbar-fixed-top aa_nav">
@@ -65,6 +65,6 @@
       </div>
     </nav>
     -->
-		<!-- /.aa_nav -->
-	</header>
-	<!-- /.aa_navigation -->
+    <!-- /.aa_nav -->
+  </header>
+  <!-- /.aa_navigation -->

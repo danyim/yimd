@@ -7,17 +7,17 @@
 ?>
 <section class="aa_no_results">
 
-	<h1 class="content-title"> Got nothin' for ya </h1>
+  <h1 class="content-title"> Got nothin' for ya </h1>
 
-	<div class="content">
-		<?php if ( is_search() ) : ?>
-			<p><?php esc_html_e( 'Nothing found. Try again:', 'neat' ); ?></p>
-			<?php get_search_form(); ?>
-		<?php else : ?>
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'neat' ); ?></p>
-			<?php get_search_form(); ?>
-		<?php endif; ?>
-	</div>
+  <div class="content">
+    <?php if ( is_search() ) : ?>
+      <p><?php esc_html_e( 'Nothing found. Try again:', 'neat' ); ?></p>
+      <?php get_search_form(); ?>
+    <?php else : ?>
+      <p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'neat' ); ?></p>
+      <?php get_search_form(); ?>
+    <?php endif; ?>
+  </div>
 
 </section>
 <!-- /.aa_no_results -->
