@@ -115,16 +115,16 @@ gulp.task('bowerFiles', function() {
                         // './js/alert.js',
                         // './js/button.js',
                         // './js/carousel.js',
-                        // './js/collapse.js',
+                        './js/collapse.js',
                         // './js/dropdown.js',
                         // './js/modal.js',
                         // './js/popover.js',
-                        './js/scrollspy.js',
-                        './js/tab.js',
+                        // './js/scrollspy.js',
+                        // './js/tab.js',
                         // './js/tooltip.js',
                         // './js/transition.js',
-                        './dist/css/*.css'
-                        //'./dist/fonts/*.*'
+                        './dist/css/*.css',
+                        './dist/fonts/*.*'
                     ]
                 },
                 'font-awesome': {
