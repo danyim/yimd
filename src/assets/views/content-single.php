@@ -28,7 +28,7 @@
         <h1 class="post-title">
           <?php the_title(); ?>
           <div class="post-subtitle">
-            <?php aa_posted_on(); ?>
+            <?php aa_posted_on(); ?> &dash; <?php the_category(', '); ?>
           </div>
           <!-- /.aa_single__meta -->
         </h1>

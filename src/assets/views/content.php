@@ -9,7 +9,7 @@
     <a href="<?php the_permalink(); ?>">
       <?php the_title(); ?>
     </a>
-    <small class="post-subtitle"><?php aa_posted_on(); ?> &dash; <?php the_category(' '); ?></small>
+    <small class="post-subtitle"><?php aa_posted_on(); ?> &dash; <?php the_category(', '); ?></small>
 
   </h1>
 
