@@ -301,17 +301,33 @@ nav.post-navigation {
     flex-basis: 100%;
     margin-bottom: 1.0rem;
     h1 {
-      font-family: $f6_lit;
-      font-size: 4.0rem;
-      text-transform: uppercase;
-      letter-spacing: -0.2rem;
-      text-align: center;
+      @extend .__ext_base_title;
+      font-size: 4.0rem !important;
+      // font-family: $f6_lit;
+      // text-transform: uppercase;
+      // letter-spacing: -0.2rem;
+      // text-align: center;
     }
     .badges {
       font-size: 1.7rem;
       text-align: center;
-      & > a {
-        margin-right: 0.6rem;
+      // & > a {
+      //   margin-right: 0.8rem;
+      // }
+      & > a:after {
+        display: inline-block;
+        content: '•';
+        color: #AAA;
+        margin: 0 .4rem;
+      }
+
+      & > a:hover:after {
+        text-decoration: none;
+      }
+
+      & > a:last-of-type:after {
+        content: '';
+        margin: 0;
       }
     }
   }

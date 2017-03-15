@@ -15,6 +15,9 @@ get_header(); ?>
     <div class="resume">
         <div class="header">
             <h1>Daniel D. Yim</h1>
+            <div class="center m-b">
+              <small><a href="http://yimd.net/resume.pdf" target="_blank">(View PDF Version)</a></small>
+            </div>
             <div class="badges">
                 <a href="https://twitter.com/danyim" target="_blank"><i class="fa fa-twitter"></i></a>
                 <a href="https://www.linkedin.com/in/danielyim" target="_blank"><i class="fa fa-linkedin"></i></a>
