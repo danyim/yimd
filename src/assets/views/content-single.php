@@ -24,7 +24,7 @@
 ?>
   <div class="container">
     <div class="row">
-      <div class="col-md-12 text-center">
+      <div class="col-md-10 col-md-offset-1 text-center">
         <h1 class="post-title">
           <?php the_title(); ?>
           <div class="post-subtitle">
@@ -51,7 +51,7 @@
 
   <div class="content container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-10 col-md-offset-1">
 
         <?php the_content(); ?>
 
