@@ -10,9 +10,11 @@ get_header(); ?>
 <div class="container">
   <div class="row aa_wrap">
     <div class="col-md-12">
-		  <h1><?php esc_html_e( 'Page not found.', 'neat' ); ?></h1>
-
-		  <p><?php esc_html_e( 'The page you were looking for couldn\'t be found.', 'neat' ); ?></p>
+      <h1 class="content-title"><?php esc_html_e( 'Page not found', 'neat' ); ?></h1>
+      <div class="content" style="text-align: center;">
+        <p><?php esc_html_e( 'The page you were looking for doesn\'t exist.', 'neat' ); ?></p>
+        <p>&nbsp;</p>
+      </div>
     </div>
   </div>
 </div>

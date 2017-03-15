@@ -75,7 +75,7 @@ ol, ul {
   padding: 0;
 }
 
-select{
+select {
   width: 100%;
 }
 
@@ -86,6 +86,10 @@ select{
   opacity: 0.7;
 }
 
+.center {
+  text-align: center;
+}
+
 .vtop {
     display: inline-block;
     vertical-align: top;
@@ -94,5 +98,4 @@ select{
 
 .m-b {
   margin-bottom: 2.0rem;
-
 }
