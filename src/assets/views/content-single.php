@@ -14,10 +14,10 @@
 <?php
     if($url != NULL) {
 ?>
-    <div class="jumbotron background-cover" style="background-image: url('<?=$url?>');">
-        <div class="container">
-            <div></div>
-        </div>
+    <div class="featured-image">
+      <div class="container">
+        <img src="<?=$url?>" />
+      </div>
     </div>
 <?php
     }
@@ -36,7 +36,7 @@
     </div>
   </div>
 
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
         <?php
@@ -47,7 +47,7 @@
         <br /><br />
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="content container">
     <div class="row">

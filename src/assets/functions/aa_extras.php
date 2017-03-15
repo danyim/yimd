@@ -82,3 +82,16 @@ function aa_remove_comment_styling_prompt($defaults) {
   $defaults['comment_notes_after'] = '';
   return $defaults;
 }
+
+/**
+ * Adds the 'current-menu-item' class to highlight the menu item when a single
+ * post is being viewed
+ */
+
+add_filter('nav_menu_css_class', 'special_nav_class', 10, 4);
+function special_nav_class ($classes, $item, $args, $depth) {
+  if (is_single() && $item->title == 'Blog') {
+    $classes[] = 'current-menu-item';
+  }
+  return $classes;
+}
