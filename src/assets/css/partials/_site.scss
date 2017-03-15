@@ -516,6 +516,9 @@ a.read-more {
 }
 .__ext_body-serif {
   font: normal 400 1.40rem/1.6 $f4_lit; // Serif
+  li {
+    margin-left: 2.8rem;
+  }
 }
 .__ext_body-sans-serif {
   font: normal 300 1.20rem/1.5 $f1_lit; // Non-serif
