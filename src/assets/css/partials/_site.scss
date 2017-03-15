@@ -26,6 +26,10 @@
   transition: background-color 0.2s;
   margin: 0;
 
+  .navbar-toggle .icon-bar {
+    background-color: $accent;
+  }
+
   ul {
     margin: 0;
     // Nav transitions (can't nest these with SCSS)
@@ -195,6 +199,7 @@ nav.post-navigation {
 }
 
 .portfolio {
+  width: 100%;
   max-width: 1120px;
   margin: 2.0rem 0;
   display: flex;
