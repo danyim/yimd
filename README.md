@@ -1,5 +1,5 @@
 # yimd.net Wordpress Theme
-A modernized Gulp-based WordPress theme tailored for my personal blog and website @ [http://yimd.net](http://yimd.net).
+A modernized [Gulp](https://github.com/gulpjs/gulp)-based WordPress theme tailored for my personal blog and website @ [http://yimd.net](http://yimd.net).
 
 ## Installation
 1. Run `npm install && bower install` at the project root
