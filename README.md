@@ -1,12 +1,25 @@
 # yimd.net Wordpress Theme
 A modernized Gulp-based WordPress theme tailored for my personal blog and website @ [http://yimd.net](http://yimd.net).
 
-### Setup
-1. Run `npm install && bower install` in the project directory
-2. Install PHP and Wordpress
-3. From your Wordpress installation directory, navigate to `/wp-content/themes/` and create a symlink to the `.tmp` directory of this project
-4. Log in to Wordpress as an administrator and install the theme through the UI
-5. **Important:** Turn off caching to see changes when reloading
+## Installation
+1. Run `npm install && bower install` at the project root
+2. Run the following
+    ```bash
+    > make up # Start up up the Wordpress & PHP containers
+    ```
+
+3. Navigate to `http://localhost:8000` and go through the setup process (you'll only do this once)
+4. Activate the **yimd** theme from Appearance > Themes
+
+### Commands
+
+```bash
+> make up       # Start up the Wordpress & PHP containers
+> make down     # Shut down the containers but persist data
+> make clean    # Remove contains and all data
+> make sh       # Attach a bash session to the server
+> make logs     # View container logs
+```
 
 ### Publish via FTP
 1. Publish via FTP by editing and renaming `ftp-config.json.example` to `ftp-config.json`
