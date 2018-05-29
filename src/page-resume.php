@@ -10,7 +10,7 @@
  * @package yimd
  */
 
-get_header(); ?>
+get_header();?>
 <section class="container flex-container">
     <div class="resume">
         <div class="header">
@@ -34,7 +34,6 @@ get_header(); ?>
                     <h3>Frameworks</h3>
                     <ul>
                         <li>React/Redux</li>
-                        <li>AngularJS (1.5)</li>
                         <li>Node</li>
                         <li>Phoenix</li>
                         <li>ASP.NET MVC C#</li>
@@ -43,9 +42,9 @@ get_header(); ?>
                 <div>
                     <h3>Languages</h3>
                     <ul>
-                        <li>Javascript (ES6)</li>
-                        <li>HTML5/CSS3</li>
-                        <li>C#</li>
+                        <li>Javascript (ES6/7/next)</li>
+                        <li>HTML/CSS</li>
+                        <li>Golang</li>
                         <li>Elixir</li>
                         <li>Shell scripting</li>
                     </ul>
@@ -54,9 +53,9 @@ get_header(); ?>
                     <h3>Tools</h3>
                     <ul>
                         <li>AWS</li>
-                        <li>Azure</li>
-                        <li>Babel</li>
-                        <li>ESLint</li>
+                        <li>Docker</li>
+                        <li>Babel/ESLint</li>
+                        <li>Jest/Enzyme (testing)</li>
                         <li>git</li>
                     </ul>
                 </div>
@@ -69,6 +68,15 @@ get_header(); ?>
         <section class="experience">
             <div class="heading"><h2>Experience</h2></div>
             <ul>
+                <li>
+                    <strong>Sr. Software Engineer</strong> - Cruise Automation, 2018-present
+                </li>
+                <li>
+                    <strong>Software Engineer</strong> - Zippy.ai, 2017-2018
+                </li>
+                <li>
+                    <strong>Contract Software Engineer</strong> - Hirevisor, 2017
+                </li>
                 <li>
                     <strong>Software Consultant</strong> - Pariveda Solutions, 2014-2016
                 </li>
@@ -87,12 +95,12 @@ get_header(); ?>
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat.</p> -->
         </section>
-        <section class="education">
+        <!-- <section class="education">
             <div class="heading"><h2>Education</h2></div>
             <p>B.S. in Computer Science with minor in Mathematics</p>
             <p><strong>Stephen F. Austin State University, 2007-2011</strong></p>
-        </section>
+        </section> -->
     </div>
 </section>
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php get_sidebar();?>
+<?php get_footer();?>
