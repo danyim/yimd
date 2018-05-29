@@ -24,7 +24,7 @@ services:
        WORDPRESS_DB_USER: wordpress
        WORDPRESS_DB_PASSWORD: wordpress
      volumes:
-      - ".tmp:/var/www/html/wp-content/themes/yimd"
+      - "./dist:/var/www/html/wp-content/themes/yimd"
 volumes:
     db_data:
 
