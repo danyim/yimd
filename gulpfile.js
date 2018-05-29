@@ -1,5 +1,13 @@
+const $ = require('gulp-load-plugins')({
+  pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license']
+})
+const gulp = require('gulp')
+const browserSync = require('browser-sync') // Asynchronous browser loading on .scss file changes
+const reload = browserSync.reload
+const ftp = require('vinyl-ftp')
+
 // Project configuration
-const project = 'neatBootstrap' // Project name, used for build zip.
+const project = 'yimdTheme' // Project name, used for build zip.
 const url = 'neat.dev' // Local Development URL for BrowserSync. Change as-needed.
 const bower = 'src/bower_components/' // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
 const build = 'dist'
@@ -30,31 +38,20 @@ const buildInclude = [
   '!src/assets/js/**/*'
 ]
 
-const ftpInfo = {
+const defaultFtpConfig = {
   // Optional FTP connection information (do not check this in)
   host: 'ftp.mysite.com',
   user: 'my@user.name',
   password: 'mypass',
   parallel: 5, // Max # of parallel connections
-  path: '/blog/wp-content/themes/bootstrap'
+  path: '/blog/wp-content/themes/yimd'
 }
 
-// Load plugins
-const $ = require('gulp-load-plugins')({
-  pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license']
-})
-const gulp = require('gulp'),
-  browserSync = require('browser-sync'), // Asynchronous browser loading on .scss file changes
-  reload = browserSync.reload,
-  ftp = require('vinyl-ftp')
 // Read FTP configuration file if it exists
+let ftpConfig
 try {
-  const configFile = require('./ftp-config.json')
-  ftpInfo.host = configFile.host
-  ftpInfo.user = configFile.user
-  ftpInfo.password = configFile.password
-  ftpInfo.parallel = configFile.parallel
-  ftpInfo.path = configFile.path
+  const ftpConfigFile = require('./ftp-config.json')
+  ftpConfig = Object.assign({}, defaultFtpConfig, ftpConfigFile)
 } catch (ex) {} // Use default values in this file if .json isn't there
 
 /**
@@ -364,16 +361,16 @@ gulp.task(
   */
 gulp.task('ftp', function() {
   const conn = ftp.create({
-    host: ftpInfo.host,
-    user: ftpInfo.user,
-    password: ftpInfo.password,
-    parallel: ftpInfo.parallel, // Max # of parallel connections
+    host: ftpConfig.host,
+    user: ftpConfig.user,
+    password: ftpConfig.password,
+    parallel: ftpConfig.parallel, // Max # of parallel connections
     log: $.util.log
   })
   return (gulp
       .src(temp + '/**/*', { base: '.tmp/', buffer: false })
-      // .pipe(conn.newer(ftpInfo.path)) // Only upload newer files
-      .pipe(conn.dest(ftpInfo.path)) )
+      // .pipe(conn.newer(ftpConfig.path)) // Only upload newer files
+      .pipe(conn.dest(ftpConfig.path)) )
   //.pipe($.notify({ message: 'FTP task complete', onLast: true }));
 })
 

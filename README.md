@@ -27,7 +27,8 @@ A modern [Gulp](https://github.com/gulpjs/gulp)-based WordPress theme tailored f
 ```
 
 ### Publish via FTP
-1. Publish via FTP by editing and renaming `ftp-config.json.example` to `ftp-config.json`
+1. Publish via FTP by editing the template:
+    `cp ftp-config.example.json ftp-config.json`
 2. Run `yarn run publish`
 
 ### Features
