@@ -71,7 +71,8 @@ input:focus {
   border: 1px solid $c2;
 }
 
-ol, ul {
+ol,
+ul {
   padding: 0;
 }
 
@@ -92,9 +93,9 @@ select {
 }
 
 .vtop {
-    display: inline-block;
-    vertical-align: top;
-    float: none;
+  display: inline-block;
+  vertical-align: top;
+  float: none;
 }
 
 .m-b {

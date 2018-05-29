@@ -7,10 +7,8 @@
  *
  */
 
-
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) { die; }
-
+if (!defined('WPINC')) {die;}
 
 /**
  * Register widget area.
@@ -18,14 +16,14 @@ if ( ! defined( 'WPINC' ) ) { die; }
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function neat_widgets_init() {
-  register_sidebar( array(
-    'name'          => esc_html__( 'Sidebar', 'neat' ),
-    'id'            => 'aa_sidebar_1',
-    'description'   => '',
-    'before_widget' => '<div id="%1$s" class="col-sm-6 col-md-6 col-lg-3 widget %2$s">',
-    'after_widget'  => '</div>',
-    'before_title'  => '<h1 class="widget-title">// ',
-    'after_title'   => '</h1>',
-  ) );
+	register_sidebar(array(
+		'name' => esc_html__('Sidebar', 'neat'),
+		'id' => 'aa_sidebar_1',
+		'description' => '',
+		'before_widget' => '<div id="%1$s" class="col-sm-6 col-md-6 col-lg-3 widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h1 class="widget-title">// ',
+		'after_title' => '</h1>',
+	));
 }
-add_action( 'widgets_init', 'neat_widgets_init' );
+add_action('widgets_init', 'neat_widgets_init');

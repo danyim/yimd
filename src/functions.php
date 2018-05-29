@@ -23,7 +23,7 @@ if ( ! isset( $content_width ) ) {
   $content_width = 1000; /* pixels */
 }
 
-if ( ! function_exists( 'neat_setup' ) ) :
+if ( ! function_exists( 'yimd_theme_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -31,7 +31,7 @@ if ( ! function_exists( 'neat_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function neat_setup() {
+function yimd_theme_setup() {
 
 
   // Add default posts and comments RSS feed links to head.
@@ -78,8 +78,8 @@ function neat_setup() {
     'default-image' => '',
   ) ) );
 }
-endif; // neat_setup
-add_action( 'after_setup_theme', 'neat_setup' );
+endif; // yimd_theme_setup
+add_action( 'after_setup_theme', 'yimd_theme_setup' );
 
 /**
  * Styles and scripts

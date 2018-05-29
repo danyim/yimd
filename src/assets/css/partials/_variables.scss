@@ -9,12 +9,12 @@
  *
  * ------------------------------------------------------------------------- */
 
-$f1_lit: 'Open Sans', sans-serif;// 300,800,600
+$f1_lit: 'Open Sans', sans-serif; // 300,800,600
 $f2_lit: 'Abel', sans-serif;
 // $f3_lit: 'Merriweather', sans-serif;// 300
 $f4_lit: 'medium-content-serif-font', serif;
 // $f5_lit: 'EM Garamond',serif;
-$f6_lit: 'Lato',serif; // 100,300,400,900
+$f6_lit: 'Lato', serif; // 100,300,400,900
 // $f7_lit: 'Open Sans Condensed',serif; // 300,700
 // $f8_lit: 'Oswald',serif; // 300,400
 // $f_corp: 'Corporate S',sans-serif;
@@ -23,17 +23,17 @@ $f6_lit: 'Lato',serif; // 100,300,400,900
  * Colors
  * ------------------------------------------------------------------------- */
 
-$c1 		: #dedede;
-$c2 		: #292929;
+$c1: #dedede;
+$c2: #292929;
 
-$w			: #ffffff;
-$b			: #444;
-$gb			: #686868;
-$g  		: #35ad68;
-$y			: #FFFDD2;
+$w: #ffffff;
+$b: #444;
+$gb: #686868;
+$g: #35ad68;
+$y: #fffdd2;
 
 $accent: darken(red, 15%);
-$c-contrast: #FFFF4D;
+$c-contrast: #ffff4d;
 $c-nav-highlight: darken(red, 15%);
 $c-nav-highlight-bg: lighten(black, 15%);
 $c-nav-highlight-fg: white;
