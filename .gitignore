@@ -1,6 +1,6 @@
 .DS_Store
 .sass-cache
-src/bower_components
+src/bower_components/**/*
 node_modules
 *.zip
 *.map
