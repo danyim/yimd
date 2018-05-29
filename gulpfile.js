@@ -1,8 +1,10 @@
 // Project configuration
-var project = 'neatBootstrap', // Project name, used for build zip.
-  url = 'neat.dev', // Local Development URL for BrowserSync. Change as-needed.
-  bower = 'src/bower_components/' // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
-;(build = 'dist'), (temp = '.tmp'), (buildInclude = [
+const project = 'neatBootstrap' // Project name, used for build zip.
+const url = 'neat.dev' // Local Development URL for BrowserSync. Change as-needed.
+const bower = 'src/bower_components/' // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
+const build = 'dist'
+const temp = '.tmp'
+const buildInclude = [
   // Files that you want to package into a zip go here // Temporary folder where all the CSS will go
   // include common file types
   'src/**/*.php',
@@ -26,26 +28,28 @@ var project = 'neatBootstrap', // Project name, used for build zip.
   '!src/assets/css/**/*',
   '!src/assets/img/**/*',
   '!src/assets/js/**/*'
-]), (ftpInfo = {
+]
+
+const ftpInfo = {
   // Optional FTP connection information (do not check this in)
   host: 'ftp.mysite.com',
   user: 'my@user.name',
   password: 'mypass',
   parallel: 5, // Max # of parallel connections
   path: '/blog/wp-content/themes/bootstrap'
-})
+}
 
 // Load plugins
-var $ = require('gulp-load-plugins')({
+const $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license']
 })
-var gulp = require('gulp'),
+const gulp = require('gulp'),
   browserSync = require('browser-sync'), // Asynchronous browser loading on .scss file changes
   reload = browserSync.reload,
   ftp = require('vinyl-ftp')
 // Read FTP configuration file if it exists
 try {
-  var configFile = require('./ftp-config.json')
+  const configFile = require('./ftp-config.json')
   ftpInfo.host = configFile.host
   ftpInfo.user = configFile.user
   ftpInfo.password = configFile.password
@@ -60,7 +64,7 @@ try {
  * Although, I think this is redundant, since we have a watch task that does this already.
  */
 gulp.task('browser-sync', function() {
-  var files = ['**/*.php', '**/*.{png,jpg,gif}']
+  const files = ['**/*.php', '**/*.{png,jpg,gif}']
   browserSync.init(files, {
     // Read here http://www.browsersync.io/docs/options/
     proxy: url,
@@ -84,9 +88,9 @@ gulp.task('browser-sync', function() {
  * Looks for scripts, fonts, and CSS/SCSS from your installed bower components
  */
 gulp.task('bowerFiles', function() {
-  var jsFilter = $.filter('**/*.js', { restore: true })
-  var cssFilter = $.filter(['**/*.{css,sass,scss}'], { restore: true })
-  var fontFilter = $.filter(['**/*.{woff,woff2,ttf,eot,svg}'], {
+  const jsFilter = $.filter('**/*.js', { restore: true })
+  const cssFilter = $.filter(['**/*.{css,sass,scss}'], { restore: true })
+  const fontFilter = $.filter(['**/*.{woff,woff2,ttf,eot,svg}'], {
     restore: true
   })
 
@@ -359,7 +363,7 @@ gulp.task(
   * Uploads the build folder, which has been cleaned and optimized, to a FTP server
   */
 gulp.task('ftp', function() {
-  var conn = ftp.create({
+  const conn = ftp.create({
     host: ftpInfo.host,
     user: ftpInfo.user,
     password: ftpInfo.password,
@@ -386,7 +390,7 @@ gulp.task(
   'build',
   ['styles', 'vendorsJs', 'scriptsJs', 'images', 'fonts', 'buildFiles'],
   function(cb) {
-    var vendorJsFilter = $.filter(['assets/js/vendors.js'], { restore: true })
+    const vendorJsFilter = $.filter(['assets/js/vendors.js'], { restore: true })
 
     return (
       gulp
@@ -407,8 +411,8 @@ gulp.task('build:ftp', ['build', 'ftp'])
 gulp.task('serve', ['build', 'watch'])
 
 // gulp.task('build', ['styles', 'vendorsJs', 'scriptsJs', 'images', 'buildFiles'], function(cb) {
-//     var vendorJsFilter = $.filter(['assets/js/vendors.js'], {restore: true});
-//     var cssFilter = $.filter(['assets/*.css'], {restore: true});
+//     const vendorJsFilter = $.filter(['assets/js/vendors.js'], {restore: true});
+//     const cssFilter = $.filter(['assets/*.css'], {restore: true});
 
 //     return gulp.src(temp + '/**/*')
 //         .pipe(vendorJsFilter)
