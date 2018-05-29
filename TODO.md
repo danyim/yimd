@@ -18,8 +18,10 @@ TODO List
 
 ### Nice to Have
 - Use CSS Grid for layouts
-- Remove bootstrap dependency (where are we using this anyway?)
+- **Remove bootstrap dependency**
+    - Only used for layouts 
 - Re-style headings
 - Optimize for technical posts with many pictures
 - Add jQuery fade-in-on-scroll to spruce up the portfolio page: http://stackoverflow.com/a/23115298
 - Improve [kitchen sink page](https://yimd.net/kitchen-sink/) to display more styles
+- Create favicon
