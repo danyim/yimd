@@ -2,25 +2,6 @@
  * Site sections
  * ------------------------------------------------------------------------- */
 
-// For headroom.js
-.headroom {
-}
-.headroom--top .aa_nav {
-  background-color: transparent;
-  // height: 50px;
-  // min-height: 50px;
-}
-.headroom--not-top .aa_nav {
-  background-color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(0, 0, 0, 0.4);
-
-  ul li a {
-    color: $w !important;
-  }
-  // height: 5px;
-  // min-height: 0px;
-}
-
 .aa_navigation .aa_nav {
   transition: background-color 0.2s;
   margin: 0;
