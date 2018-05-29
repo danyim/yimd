@@ -10,7 +10,7 @@
  * @package yimd
  */
 
-get_header(); ?>
+get_header();?>
 <section class="container flex-container">
     <div class="portfolio">
         <div class="portfolio-item">
@@ -109,5 +109,5 @@ get_header(); ?>
         </div>
     </div>
 </section>
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php get_sidebar();?>
+<?php get_footer();?>

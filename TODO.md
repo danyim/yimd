@@ -18,5 +18,5 @@ Immediate
 
 Nice to Have
 ========
-- Fix responsiveness of front page's logo card
+- Use CSS Grid for layouts
 - Add jQuery fade-in-on-scroll to spruce up the portfolio page: http://stackoverflow.com/a/23115298
