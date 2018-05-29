@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package SolidBootstrap
+ * @package yimd
  */
 
 get_header(); ?>

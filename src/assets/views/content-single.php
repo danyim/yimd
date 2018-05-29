@@ -1,6 +1,6 @@
 <?php
 /**
- * @package SolidBootstrap
+ * @package yimd
  */
 ?>
 

@@ -2,7 +2,7 @@
 /**
  * Neat functions and definitions
  *
- * @package SolidBootstrap
+ * @package yimd
  */
 
 /**

@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package SolidBootstrap
+ * @package yimd
  */
 
 if ( ! is_active_sidebar( 'aa_sidebar_1' ) ) {

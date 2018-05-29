@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package SolidBootstrap
+ * @package yimd
  */
 
 get_header(); ?>

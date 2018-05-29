@@ -2,7 +2,7 @@
 /**
  * The blog page.
  *
- * @package SolidBootstrap
+ * @package yimd
  */
 
 get_header(); ?>

@@ -4,7 +4,7 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package SolidBootstrap
+ * @package yimd
  */
 ?>
   <div class="container-fluid footer-container footer-container-inverse">
