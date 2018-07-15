@@ -468,12 +468,13 @@ nav.post-navigation {
 
 // Footer styles
 .footer {
-  margin: 3.0rem 0;
+  margin: 2.0rem 0.3rem;
   p {
     text-align: right;
     font-family: $f2_lit;
     font-size: 0.80rem;
     text-transform: uppercase;
+    margin: 0;
   }
 }
 

@@ -21,15 +21,16 @@ html {
 }
 
 body {
-  font: 400 12px/1.4 sans-serif;
-  font-family: $f1_lit;
+  font: 400 12px/1.4 $f1_lit;
   color: $c2;
   margin: 0;
-  background: $w !important;
+  background: $w;
   height: 100%;
   min-height: 100%;
-  position: relative;
+  display: grid;
+  grid-template-rows: 50px auto 1fr auto;
 }
+
 /* clear */
 .clear:before,
 .clear:after {
