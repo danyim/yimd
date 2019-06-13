@@ -8,6 +8,9 @@ up-bg:
 down:
 	docker-compose down
 
+ps:
+	docker-compose ps 
+
 # Deletes all database data
 clean:
 	docker-compose down --volumes
