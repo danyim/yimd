@@ -1,57 +1,57 @@
-const $ = require('gulp-load-plugins')({
-  pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license']
-})
-const gulp = require('gulp')
-const browserSync = require('browser-sync') // Asynchronous browser loading on .scss file changes
-const reload = browserSync.reload
-const ftp = require('vinyl-ftp')
+const $ = require("gulp-load-plugins")({
+  pattern: ["gulp-*", "main-bower-files", "uglify-save-license"],
+});
+const gulp = require("gulp");
+const browserSync = require("browser-sync"); // Asynchronous browser loading on .scss file changes
+const reload = browserSync.reload;
+const ftp = require("vinyl-ftp");
 
 // Project configuration
-const project = 'yimdTheme' // Project name, used for build zip.
-const url = 'neat.dev' // Local Development URL for BrowserSync. Change as-needed.
-const bower = 'src/bower_components/' // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
-const build = 'dist'
-const temp = '.tmp'
+const project = "yimdTheme"; // Project name, used for build zip.
+const url = "neat.dev"; // Local Development URL for BrowserSync. Change as-needed.
+const bower = "src/bower_components/"; // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
+const build = "dist";
+const temp = ".tmp";
 const buildInclude = [
   // Files that you want to package into a zip go here // Temporary folder where all the CSS will go
   // include common file types
-  'src/**/*.php',
-  'src/src/**/*.html',
-  'src/**/*.css',
-  'src/**/*.js',
-  'src/**/*.svg',
-  'src/**/*.ttf',
-  'src/**/*.otf',
-  'src/**/*.eot',
-  'src/**/*.woff',
-  'src/**/*.woff2',
+  "src/**/*.php",
+  "src/src/**/*.html",
+  "src/**/*.css",
+  "src/**/*.js",
+  "src/**/*.svg",
+  "src/**/*.ttf",
+  "src/**/*.otf",
+  "src/**/*.eot",
+  "src/**/*.woff",
+  "src/**/*.woff2",
 
   // include specific files and folders
-  'screenshot.png',
+  "screenshot.png",
 
   // exclude files and folders
-  '!node_modules/**/*',
-  '!src/bower_components/**/*',
+  "!node_modules/**/*",
+  "!src/bower_components/**/*",
   // '!style.css.map',
-  '!src/assets/css/**/*',
-  '!src/assets/img/**/*',
-  '!src/assets/js/**/*'
-]
+  "!src/assets/css/**/*",
+  "!src/assets/img/**/*",
+  "!src/assets/js/**/*",
+];
 
 const defaultFtpConfig = {
   // Optional FTP connection information (do not check this in)
-  host: 'ftp.mysite.com',
-  user: 'my@user.name',
-  password: 'mypass',
+  host: "ftp.mysite.com",
+  user: "my@user.name",
+  password: "mypass",
   parallel: 5, // Max # of parallel connections
-  path: '/blog/wp-content/themes/yimd'
-}
+  path: "/blog/wp-content/themes/yimd",
+};
 
 // Read FTP configuration file if it exists
-let ftpConfig
+let ftpConfig;
 try {
-  const ftpConfigFile = require('./ftp-config.json')
-  ftpConfig = Object.assign({}, defaultFtpConfig, ftpConfigFile)
+  const ftpConfigFile = require("./ftp-config.json");
+  ftpConfig = Object.assign({}, defaultFtpConfig, ftpConfigFile);
 } catch (ex) {} // Use default values in this file if .json isn't there
 
 /**
@@ -60,8 +60,8 @@ try {
  * Asynchronous browser syncing of assets across multiple devices!! Watches for changes to js, image and php files
  * Although, I think this is redundant, since we have a watch task that does this already.
  */
-gulp.task('browser-sync', function() {
-  const files = ['**/*.php', '**/*.{png,jpg,gif}']
+gulp.task("browser-sync", function () {
+  const files = ["**/*.php", "**/*.{png,jpg,gif}"];
   browserSync.init(files, {
     // Read here http://www.browsersync.io/docs/options/
     proxy: url,
@@ -75,23 +75,24 @@ gulp.task('browser-sync', function() {
     // tunnel: 'ppress',
 
     // Inject CSS changes
-    injectChanges: true
-  })
-})
+    injectChanges: true,
+  });
+});
 
 /**
  * Scripts/Fonts/CSS: Vendors
  *
  * Looks for scripts, fonts, and CSS/SCSS from your installed bower components
  */
-gulp.task('bowerFiles', function() {
-  const jsFilter = $.filter('**/*.js', { restore: true })
-  const cssFilter = $.filter(['**/*.{css,sass,scss}'], { restore: true })
-  const fontFilter = $.filter(['**/*.{woff,woff2,ttf,eot,svg}'], {
-    restore: true
-  })
+gulp.task("bowerFiles", function () {
+  const jsFilter = $.filter("**/*.js", { restore: true });
+  const cssFilter = $.filter(["**/*.{css,sass,scss}"], { restore: true });
+  const fontFilter = $.filter(["**/*.{woff,woff2,ttf,eot,svg}"], {
+    restore: true,
+  });
 
-  return (gulp
+  return (
+    gulp
       .src(
         $.mainBowerFiles({
           overrides: {
@@ -112,44 +113,45 @@ gulp.task('bowerFiles', function() {
                 // './js/tab.js',
                 // './js/tooltip.js',
                 // './js/transition.js',
-                './dist/css/*.css'
+                "./dist/css/*.css",
                 // './dist/fonts/*.*'
-              ]
+              ],
             },
-            'font-awesome': {
-              main: ['./fonts/*.{woff,woff2,ttf,eot,svg}', './scss/*.*']
-            }
-          }
+            "font-awesome": {
+              main: ["./fonts/*.{woff,woff2,ttf,eot,svg}", "./scss/*.*"],
+            },
+          },
         })
       )
       .pipe(jsFilter)
-      .pipe($.concat('vendor.js'))
+      .pipe($.concat("vendor.js"))
       // Write the JS files back into the src directory for processing later
       // via the vendorsJs task
-      .pipe(gulp.dest('src/assets/js/vendor'))
+      .pipe(gulp.dest("src/assets/js/vendor"))
       .pipe(jsFilter.restore)
       .pipe(cssFilter)
       .pipe(
         $.sass({
           errLogToConsole: true,
-          precision: 10
+          precision: 10,
         })
       )
-      .on('error', $.util.log)
-      .pipe($.concat('vendor.css'))
-      .pipe($.rename({ suffix: '.min' }))
+      .on("error", $.util.log)
+      .pipe($.concat("vendor.css"))
+      .pipe($.rename({ suffix: ".min" }))
       .pipe(
         $.uglifycss({
-          maxLineLen: 80
+          maxLineLen: 80,
         })
       )
-      .pipe(gulp.dest(temp + '/assets/css')) // Comment if unminified source should not be in the build output
+      .pipe(gulp.dest(temp + "/assets/css")) // Comment if unminified source should not be in the build output
       .pipe(cssFilter.restore)
       .pipe(fontFilter)
-      .pipe(gulp.dest(temp + '/assets/fonts'))
-      .pipe(fontFilter.restore) )
+      .pipe(gulp.dest(temp + "/assets/fonts"))
+      .pipe(fontFilter.restore)
+  );
   //.pipe($.notify({ message: 'Bower vendor scripts task complete', onLast: true }));
-})
+});
 
 /**
  * Styles
@@ -158,221 +160,227 @@ gulp.task('bowerFiles', function() {
  *
  * Sass output styles: https://web-design-weekly.com/2014/06/15/different-sass-output-styles/
  */
-gulp.task('styles', ['bowerFiles'], function() {
+gulp.task("styles", ["bowerFiles"], function () {
   return gulp
-    .src('src/assets/css/*.scss')
+    .src("src/assets/css/*.scss")
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe(
       $.sass({
         errLogToConsole: true,
-        outputStyle: 'compact', // Other options: compressed, nested, expanded
-        precision: 10
+        outputStyle: "compact", // Other options: compressed, nested, expanded
+        precision: 10,
       })
     )
-    .on('error', $.util.log)
+    .on("error", $.util.log)
     .pipe($.sourcemaps.write({ includeContent: false }))
     .pipe($.sourcemaps.init({ loadMaps: true }))
     .pipe(
       $.autoprefixer(
-        'last 2 version',
-        '> 1%',
-        'safari 5',
-        'ie 8',
-        'ie 9',
-        'opera 12.1',
-        'ios 6',
-        'android 4'
+        "last 2 version",
+        "> 1%",
+        "safari 5",
+        "ie 8",
+        "ie 9",
+        "opera 12.1",
+        "ios 6",
+        "android 4"
       )
     )
-    .pipe($.sourcemaps.write('.'))
+    .pipe($.sourcemaps.write("."))
     .pipe($.plumber.stop())
     .pipe(gulp.dest(temp))
-    .pipe($.filter('**/*.css')) // Filtering stream to only css files
+    .pipe($.filter("**/*.css")) // Filtering stream to only css files
     .pipe($.combineMediaQueries()) // Combines Media Queries
     .pipe(reload({ stream: true })) // Inject Styles when style file is created
-    .pipe($.rename({ suffix: '.min' }))
+    .pipe($.rename({ suffix: ".min" }))
     .pipe(
       $.uglifycss({
-        maxLineLen: 80
+        maxLineLen: 80,
       })
     )
     .pipe(gulp.dest(temp))
-    .pipe(reload({ stream: true })) // Inject Styles when min style file is created
+    .pipe(reload({ stream: true })); // Inject Styles when min style file is created
   //.pipe($.notify({ message: 'Styles task complete', onLast: true }))
-})
+});
 
 /**
  * Scripts: Vendors
  *
  * Look at src/assets/js/vendor and concatenate those files, send them to assets/js where we then minimize the concatenated file.
  */
-gulp.task('vendorsJs', ['bowerFiles'], function() {
-  return (gulp
-      .src('src/assets/js/vendor/*.js')
-      .pipe($.filter('*.js'))
-      .pipe($.concat('vendors.js'))
+gulp.task("vendorsJs", ["bowerFiles"], function () {
+  return (
+    gulp
+      .src("src/assets/js/vendor/*.js")
+      .pipe($.filter("*.js"))
+      .pipe($.concat("vendors.js"))
       // .pipe(gulp.dest(temp + '/assets/js')) // Comment if unminified source should not be in the build output
       .pipe(
         $.rename({
-          basename: 'vendors',
-          suffix: '.min'
+          basename: "vendors",
+          suffix: ".min",
         })
       )
       .pipe(
         $.uglify({
-          preserveComments: $.uglifySaveLicense
+          preserveComments: $.uglifySaveLicense,
         })
       )
-      .pipe(gulp.dest(temp + '/assets/js/')) )
+      .pipe(gulp.dest(temp + "/assets/js/"))
+  );
   //.pipe($.notify({ message: 'Vendor scripts task complete', onLast: true }));
-})
+});
 
 /**
  * Scripts: Custom
  *
  * Look at src/js and concatenate those files, send them to assets/js where we then minimize the concatenated file.
  */
-gulp.task('scriptsJs', ['wpScriptsJs'], function() {
-  return (gulp
+gulp.task("scriptsJs", ["wpScriptsJs"], function () {
+  return (
+    gulp
       .src([
-        'src/assets/js/**/*.js',
-        '!src/assets/js/vendor/**/*',
-        '!src/assets/js/{html5shiv,respond.min}.js'
+        "src/assets/js/**/*.js",
+        "!src/assets/js/vendor/**/*",
+        "!src/assets/js/{html5shiv,respond.min}.js",
       ])
-      .pipe($.concat('scripts.js'))
+      .pipe($.concat("scripts.js"))
       // .pipe(gulp.dest(temp + '/assets/js')) // Comment if unminified source should not be in the build output
       .pipe(
         $.rename({
-          basename: 'scripts',
-          suffix: '.min'
+          basename: "scripts",
+          suffix: ".min",
         })
       )
       .pipe(
         $.uglify({
-          preserveComments: $.uglifySaveLicense
+          preserveComments: $.uglifySaveLicense,
         })
       )
-      .pipe(gulp.dest(temp + '/assets/js/')) )
+      .pipe(gulp.dest(temp + "/assets/js/"))
+  );
   //.pipe($.notify({ message: 'Custom scripts task complete', onLast: true }));
-})
+});
 
 /**
  * Scripts: WP Custom
  *
  * Special files refreenced in aa_scripts_styles.php for certain browsers
  */
-gulp.task('wpScriptsJs', function() {
+gulp.task("wpScriptsJs", function () {
   return gulp
-    .src('src/assets/js/{html5shiv,respond.min}.js')
-    .pipe(gulp.dest(temp + '/assets/js/'))
+    .src("src/assets/js/{html5shiv,respond.min}.js")
+    .pipe(gulp.dest(temp + "/assets/js/"));
   //.pipe($.notify({ message: 'Custom scripts task complete', onLast: true }));
-})
+});
 
 /**
  * Images
  *
  * Look at src/assets/img, optimize the images and send them to the staging folder
  */
-gulp.task('images', function() {
+gulp.task("images", function () {
   // Add the newer pipe to pass through newer images only
   return gulp
-    .src(['src/assets/img/**/*.{png,jpg,jpeg,gif}'])
-    .pipe($.newer(temp + '/assets/img'))
+    .src(["src/assets/img/**/*.{png,jpg,jpeg,gif}"])
+    .pipe($.newer(temp + "/assets/img"))
     .pipe(
       $.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })
     )
-    .pipe(gulp.dest(temp + '/assets/img'))
+    .pipe(gulp.dest(temp + "/assets/img"));
   //.pipe($.notify( { message: 'Images task complete', onLast: true } ) );
-})
+});
 
 /**
  * Fonts
  *
  * Look at src/assets/fonts and move the fonts to the right directory
  */
-gulp.task('fonts', function() {
+gulp.task("fonts", function () {
   // Add the newer pipe to pass through newer images only
   return gulp
-    .src(['src/assets/fonts/**/*.{woff,woff2,ttf,eot,svg}'])
-    .pipe($.newer(temp + '/assets/fonts'))
-    .pipe(gulp.dest(temp + '/assets/fonts'))
+    .src(["src/assets/fonts/**/*.{woff,woff2,ttf,eot,svg}"])
+    .pipe($.newer(temp + "/assets/fonts"))
+    .pipe(gulp.dest(temp + "/assets/fonts"));
   //.pipe($.notify( { message: 'Fonts task complete', onLast: true } ) );
-})
+});
 
 /**
  * Clean gulp cache
  */
-gulp.task('clear', function() {
-  $.cache.clearAll()
-})
+gulp.task("clear", function () {
+  $.cache.clearAll();
+});
 
 /**
-  * Clean tasks for zip
-  *
-  * Being a little overzealous, but we're cleaning out the build folder, codekit-cache directory and annoying DS_Store files and Also
-  * clearing out unoptimized image files in zip as those will have been moved and optimized
-  */
-gulp.task('clean', function() {
+ * Clean tasks for zip
+ *
+ * Being a little overzealous, but we're cleaning out the build folder, codekit-cache directory and annoying DS_Store files and Also
+ * clearing out unoptimized image files in zip as those will have been moved and optimized
+ */
+gulp.task("clean", function () {
   return gulp
-    .src([temp, '.sass-cache', project + '.zip'], { read: false }) // much faster
-    .pipe($.ignore('node_modules/**')) //Example of a directory to ignore
-    .pipe($.rimraf({ force: true }))
+    .src([temp, ".sass-cache", project + ".zip"], { read: false }) // much faster
+    .pipe($.ignore("node_modules/**")) //Example of a directory to ignore
+    .pipe($.rimraf({ force: true }));
   //.pipe(notify({ message: 'Clean task complete', onLast: true }));
-})
+});
 
 /**
-  * Build task that moves essential theme files for production-ready sites
-  *
-  * buildFiles copies all the files in buildInclude to build folder - check variable values at the top
-  * buildImages copies all the images from img folder in assets while ignoring images inside raw folder if any
-  */
-gulp.task('buildFiles', function() {
-  return gulp.src(buildInclude).pipe(gulp.dest(temp))
+ * Build task that moves essential theme files for production-ready sites
+ *
+ * buildFiles copies all the files in buildInclude to build folder - check variable values at the top
+ * buildImages copies all the images from img folder in assets while ignoring images inside raw folder if any
+ */
+gulp.task("buildFiles", function () {
+  return gulp.src(buildInclude).pipe(gulp.dest(temp));
   //.pipe($.notify({ message: 'Copy from buildFiles complete', onLast: true }));
-})
+});
 
 /**
-  * Zipping build directory for distribution
-  *
-  * Taking the build folder, which has been cleaned, containing optimized files and zipping it up to send out as an installable theme
-  */
+ * Zipping build directory for distribution
+ *
+ * Taking the build folder, which has been cleaned, containing optimized files and zipping it up to send out as an installable theme
+ */
 gulp.task(
-  'zip',
-  ['styles', 'vendorsJs', 'scriptsJs', 'images', 'fonts', 'buildFiles'],
-  function() {
+  "zip",
+  ["styles", "vendorsJs", "scriptsJs", "images", "fonts", "buildFiles"],
+  function () {
     return gulp
-      .src(temp + '/**/*')
-      .pipe($.zip(project + '.zip'))
+      .src(temp + "/**/*")
+      .pipe($.zip(project + ".zip"))
       .pipe(
         $.size({
-          title: 'ZIP Created'
+          title: "ZIP Created",
         })
       )
-      .pipe(gulp.dest('.'))
+      .pipe(gulp.dest("."));
     //.pipe($.notify({ message: 'Zip task complete', onLast: true }));
   }
-)
+);
 
 /**
-  * FTP distribution files
-  *
-  * Uploads the build folder, which has been cleaned and optimized, to a FTP server
-  */
-gulp.task('ftp', function() {
+ * FTP distribution files
+ *
+ * Uploads the build folder, which has been cleaned and optimized, to a FTP server
+ */
+gulp.task("ftp", function () {
   const conn = ftp.create({
     host: ftpConfig.host,
     user: ftpConfig.user,
     password: ftpConfig.password,
     parallel: ftpConfig.parallel, // Max # of parallel connections
-    log: $.util.log
-  })
-  return (gulp
-      .src(temp + '/**/*', { base: '.tmp/', buffer: false })
+    log: $.util.log,
+  });
+  return (
+    gulp
+      .src(temp + "/**/*", { base: ".tmp/", buffer: false })
       // .pipe(conn.newer(ftpConfig.path)) // Only upload newer files
-      .pipe(conn.dest(ftpConfig.path)) )
+      .pipe(conn.dest(ftpConfig.path))
+  );
   //.pipe($.notify({ message: 'FTP task complete', onLast: true }));
-})
+});
 
 // ==== TASKS ==== //
 /**
@@ -384,28 +392,30 @@ gulp.task('ftp', function() {
 
 // Package Distributable Theme
 gulp.task(
-  'build',
-  ['styles', 'vendorsJs', 'scriptsJs', 'images', 'fonts', 'buildFiles'],
-  function(cb) {
-    const vendorJsFilter = $.filter(['assets/js/vendors.js'], { restore: true })
+  "build",
+  ["styles", "vendorsJs", "scriptsJs", "images", "fonts", "buildFiles"],
+  function (cb) {
+    const vendorJsFilter = $.filter(["assets/js/vendors.js"], {
+      restore: true,
+    });
 
     return (
       gulp
-        .src(temp + '/**/*')
+        .src(temp + "/**/*")
         .pipe(vendorJsFilter)
         .pipe($.debug())
         // Minify all the JS
-        .pipe($.concat('vendor.min.js'))
+        .pipe($.concat("vendor.min.js"))
         .pipe($.uglify())
         // .pipe(gulp.dest(temp + '/assets/js/'))
         .pipe(vendorJsFilter.restore)
-        .pipe(gulp.dest('dist'))
-    )
+        .pipe(gulp.dest("dist"))
+    );
   }
-)
-gulp.task('build:zip', ['build', 'zip'])
-gulp.task('build:ftp', ['build', 'ftp'])
-gulp.task('serve', ['build', 'watch'])
+);
+gulp.task("build:zip", ["build", "zip"]);
+gulp.task("build:ftp", ["build", "ftp"]);
+gulp.task("serve", ["build", "watch"]);
 
 // gulp.task('build', ['styles', 'vendorsJs', 'scriptsJs', 'images', 'buildFiles'], function(cb) {
 //     const vendorJsFilter = $.filter(['assets/js/vendors.js'], {restore: true});
@@ -425,12 +435,12 @@ gulp.task('serve', ['build', 'watch'])
 // });
 
 // Watch Task
-gulp.task('default', ['watch'], function() {})
+gulp.task("default", ["watch"], function () {});
 
-gulp.task('watch', function() {
-  gulp.watch(buildInclude, ['buildFiles'])
-  gulp.watch('src/assets/img/**/*', ['images'])
-  gulp.watch('src/assets/css/**/*.scss', ['styles'])
-  gulp.watch('src/assets/js/**/*.js', ['scriptsJs', browserSync.reload])
-  gulp.watch('bower.json', ['bowerFiles', browserSync.reload])
-})
+gulp.task("watch", function () {
+  gulp.watch(buildInclude, ["buildFiles"]);
+  gulp.watch("src/assets/img/**/*", ["images"]);
+  gulp.watch("src/assets/css/**/*.scss", ["styles"]);
+  gulp.watch("src/assets/js/**/*.js", ["scriptsJs", browserSync.reload]);
+  gulp.watch("bower.json", ["bowerFiles", browserSync.reload]);
+});
