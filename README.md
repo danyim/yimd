@@ -6,17 +6,18 @@
 
 ## Installation
 
-1.  Run `npm install && bower install` at the project root
-2.  Run `make up` to download the containers and start them up
-3.  Navigate to `http://localhost:8000` and go through the setup process (you'll only need to do this once)
-4.  Activate the **daniely.im Theme** from Appearance > Themes
+1.  Use Node v7.10.1 `nvm install 7.10.1`
+1.  Fetch dependencies: `yarn install && bower install`
+1.  Run `make up` to pull the containers and build a Dockerized Wordpress installation
+1.  Navigate to `http://localhost:8000` and go through the setup process (you'll only need to do this once)
+1.  Activate the **daniely.im Theme** from Appearance > Themes
 
 ### Development
 
 1.  Run the container in the background `make up`
-2.  Start the `/src` watch process: `yarn run watch`
-3.  Edit files
-4.  See changes after a refresh at `http://localhost:8000`
+1.  Start the `/src` watch process: `yarn run watch`
+1.  Edit files
+1.  See changes after a refresh at `http://localhost:8000`
 
 ### Deployment
 
@@ -29,5 +30,5 @@ cp ftp-config{.example,}.json
 Then run `publish`:
 
 ```bash
-npm run publish
+yarn run publish
 ```
