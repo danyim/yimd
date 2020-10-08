@@ -18,4 +18,16 @@
 3.  Edit files
 4.  See changes after a refresh at `http://localhost:8000`
 
-### Commands
+### Deployment
+
+Copy the example config and add credentials
+
+```bash
+cp ftp-config{.example,}.json
+```
+
+Then run `publish`:
+
+```bash
+npm run publish
+```
