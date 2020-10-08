@@ -14,7 +14,7 @@ get_header();?>
 <section class="container flex-container">
     <div class="portfolio">
         <div class="portfolio-item">
-            <figure style="background-image: url('http://yimd.net/wp-content/uploads/2016/08/indecks-1024x672.png');">
+            <figure style="background-image: url('http://daniely.im/wp-content/uploads/2016/08/indecks-1024x672.png');">
             </figure>
             <figcaption>
                 <h4>
@@ -25,7 +25,7 @@ get_header();?>
             </figcaption>
         </div>
         <div class="portfolio-item">
-            <figure style="background-image: url('https://yimd.net/wp-content/uploads/2017/03/breaking-bao-1024x873.png');">
+            <figure style="background-image: url('https://daniely.im/wp-content/uploads/2017/03/breaking-bao-1024x873.png');">
             </figure>
             <figcaption>
                 <h4>
@@ -40,7 +40,7 @@ get_header();?>
             </figcaption>
         </div>
         <div class="portfolio-item">
-            <figure style="background-image: url('http://yimd.net/wp-content/uploads/2016/08/yotta-991x1024.png');">
+            <figure style="background-image: url('http://daniely.im/wp-content/uploads/2016/08/yotta-991x1024.png');">
             </figure>
             <figcaption>
                 <h4>
@@ -52,7 +52,7 @@ get_header();?>
         </div>
 
         <div class="portfolio-item">
-            <figure style="background-image: url('https://yimd.net/wp-content/uploads/2017/03/artgorithms-1024x748.png');">
+            <figure style="background-image: url('https://daniely.im/wp-content/uploads/2017/03/artgorithms-1024x748.png');">
             </figure>
             <!-- <figure>
                 <h4 class="ital">
@@ -82,11 +82,11 @@ get_header();?>
             </figcaption>
         </div>
         <div class="portfolio-item">
-            <figure style="background-image: url('http://yimd.net/wp-content/uploads/2016/08/cspeak-661x1024.png');">
+            <figure style="background-image: url('http://daniely.im/wp-content/uploads/2016/08/cspeak-661x1024.png');">
             </figure>
             <figcaption>
                 <h4>
-                    <a href="http://jargon.yimd.net/" target="_blank">Consultant Speak</a>
+                    <a href="http://jargon.daniely.im/" target="_blank">Consultant Speak</a>
                     <a href="https://github.com/danyim/ConsultantSpeak" target="_blank">
                         <i class="fa fa-github"></i>
                     </a>
@@ -95,7 +95,7 @@ get_header();?>
             </figcaption>
         </div>
         <div class="portfolio-item">
-            <figure style="background-image: url('http://yimd.net/wp-content/uploads/2016/08/gerb-1024x691.png');">
+            <figure style="background-image: url('http://daniely.im/wp-content/uploads/2016/08/gerb-1024x691.png');">
             </figure>
             <figcaption>
                 <h4>

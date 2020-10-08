@@ -1,7 +1,7 @@
 {
   "name": "yimd-theme",
   "version": "1.0.0",
-  "homepage": "http://yimd.net",
+  "homepage": "http://daniely.im",
   "authors": ["Daniel YIm"],
   "dependencies": {
     "font-awesome": "~4.4.0",
