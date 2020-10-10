@@ -7,4 +7,5 @@ node_modules
 .tmp
 ftp-config.json
 dist
+dist*
 *.sublime-workspace
