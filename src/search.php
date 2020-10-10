@@ -8,11 +8,11 @@
 get_header(); ?>
 <div class="container">
   <div class="row aa_wrap">
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col-md">
       <?php if ( have_posts() ) : ?>
         <div class="aa_header well m-b">
           <h4 class="content-header-small">
-            <?php printf( 'Displaying search results for:&nbsp;&nbsp;%s', '<span>' . get_search_query() . '</span>' ); ?>
+            <?php printf( 'Displaying search results for:&nbsp;&nbsp;"%s"', '<span>' . get_search_query() . '</span>' ); ?>
           </h4>
           <!-- /.aa_h1 -->
         </div>

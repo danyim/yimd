@@ -7,7 +7,7 @@
 ?>
 <section class="aa_no_results">
 
-  <h1 class="content-title"> Got nothin' for ya </h1>
+  <h1 class="content-title">Nothing to see here.</h1>
 
   <div class="content">
     <?php if ( is_search() ) : ?>

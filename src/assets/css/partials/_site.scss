@@ -5,9 +5,15 @@
 .aa_navigation .aa_nav {
   transition: background-color 0.2s;
   margin: 0;
+  display: flex;
+  justify-content: center;
+
+  .navbar-nav {
+    flex-direction: row;
+  }
 
   .navbar-toggle .icon-bar {
-    background-color: $accent;
+    background-color: $c-accent;
   }
 
   ul {
@@ -21,7 +27,7 @@
       width: 30%;
       margin-left: 35%;
       height: 0px;
-      background-color: $accent;
+      background-color: $c-accent;
       content: "";
       transition: width 0.2s ease-in-out, margin-left 0.2s ease-in-out;
     }
@@ -33,7 +39,7 @@
     }
     li.current-menu-item {
       opacity: 1;
-      background-color: $accent;
+      background-color: $c-accent;
       a {
         color: white;
         font-weight: bold;
@@ -47,13 +53,13 @@
       width: 100%;
       height: 3px;
       margin-left: 0;
-      background-color: $accent;
+      background-color: $c-accent;
       content: "";
       transition: width 0.2s ease-in-out, margin 0.2s;
     }
     li.current-menu-item:hover:after {
       width: 100%;
-      background-color: $accent;
+      background-color: $c-accent;
       // margin-left: 30%; // (Original width - final width) / 2
     }
     //////////////// end nav transitions
@@ -71,19 +77,19 @@
         border: none;
       }
       a {
-        font-family: $f2_lit;
+        font-family: $font-header;
         text-transform: uppercase;
         font-size: 1rem;
         display: block;
         padding: 1rem 1rem 0.5rem 1rem;
-        color: $b;
+        color: $c-black;
         :hover {
           font-weight: bold;
           text-decoration: none;
         }
         :active,
         :visited {
-          color: $b;
+          color: $c-black;
           text-decoration: none;
         }
       }
@@ -98,7 +104,7 @@
 }
 
 .navbar-header .navbar-brand {
-  font: normal 800 2.2rem/1 $f6_lit;
+  font: normal 800 2.2rem/1 $font-post-title;
 }
 
 nav.post-navigation {
@@ -121,21 +127,21 @@ nav.post-navigation {
   .accent-block {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.4);
-    color: $b;
+    color: $c-black;
     padding: 2rem;
     margin: 3rem 0;
     transition: background-color 0.5s, border-color 0.4s ease-in-out;
     border-bottom: 3px solid transparent;
     h1 {
       // Name
-      font: normal 100 4rem/2.5rem $f6_lit;
+      font: normal 100 4rem/2.5rem $font-post-title;
       letter-spacing: -0.2rem;
       text-transform: uppercase;
       margin: 0;
     }
     h3 {
       // Title below name
-      font: normal 300 1.25rem/2.55rem $f6_lit;
+      font: normal 300 1.25rem/2.55rem $font-post-title;
       letter-spacing: -0.1rem;
       text-transform: uppercase;
       margin: 0;
@@ -146,13 +152,13 @@ nav.post-navigation {
     }
   }
   .accent-block:hover {
-    border-bottom-color: $accent;
+    border-bottom-color: $c-accent;
     background-color: rgba(255, 255, 255, 0.7);
   }
 }
 
 .title-card {
-  font: normal 300 2.2rem/1 $f6_lit;
+  font: normal 300 2.2rem/1 $font-post-title;
   text-transform: uppercase;
   letter-spacing: -0.06rem;
   cursor: default;
@@ -165,7 +171,7 @@ nav.post-navigation {
   width: 100%;
   height: 1rem;
   margin-left: 0;
-  background-color: $accent;
+  background-color: $c-accent;
   content: "";
   transition: width 0.2s ease-in-out;
 }
@@ -209,7 +215,7 @@ nav.post-navigation {
     }
 
     h4 {
-      font-family: $f2_lit;
+      font-family: $font-header;
       font-weight: 300;
       font-size: 1.3rem;
       font-weight: bold;
@@ -229,7 +235,7 @@ nav.post-navigation {
       flex: 0 0 25%;
       font-size: 1rem;
       border-top: 1px solid #dedede;
-      // border-top: 3px solid $accent;
+      // border-top: 3px solid $c-accent;
       margin: 0 0.8rem;
     }
     &:hover {
@@ -266,7 +272,7 @@ nav.post-navigation {
   }
   .heading {
     h2 {
-      font-family: $f2_lit;
+      font-family: $font-header;
       font-weight: 300;
       font-size: 1.5rem;
       // font-weight: bold;
@@ -287,7 +293,7 @@ nav.post-navigation {
     h1 {
       @extend .__ext_base_title;
       font-size: 4rem !important;
-      // font-family: $f6_lit;
+      // font-family: $font-post-title;
       // text-transform: uppercase;
       // letter-spacing: -0.2rem;
       // text-align: center;
@@ -333,7 +339,7 @@ nav.post-navigation {
       }
       h3 {
         text-align: center;
-        font-family: $f2_lit;
+        font-family: $font-header;
         font-weight: bold;
         text-transform: uppercase;
       }
@@ -349,7 +355,7 @@ nav.post-navigation {
       list-style-type: none;
 
       strong {
-        font-family: $f1_lit;
+        font-family: $font-body;
         font-weight: 600;
         font-size: 1.2rem;
         letter-spacing: -0.08rem;
@@ -381,7 +387,7 @@ nav.post-navigation {
     @extend .__ext_base_title;
     .post-subtitle {
       @extend .__ext_posted_on;
-      font-family: $f1_lit;
+      font-family: $font-body;
     }
   }
 
@@ -408,34 +414,33 @@ nav.post-navigation {
 
 // Sidebar styles
 .sidebar {
+  display: flex;
+  justify-content: center;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
+}
 
-  // Individual widget boxes
-  .widget {
-    display: inline-block;
-    // min-width: 200px;
-    // width: 100px;
-    font-family: $f1_lit;
-    font-weight: 300;
-    vertical-align: top;
-    h1 {
-      font: bold 1rem $f2_lit;
-      // letter-spacing: 0.20rem;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-    ul {
-      list-style-type: none;
-      li {
-        font-size: 0.9rem;
-        margin: 0.4rem 0;
-        a:hover {
-          color: $b;
-          text-decoration: underline;
-          :focus {
-            outline: 0;
-          }
+// Individual widget boxes
+.sidebar .widget {
+  display: inline-block;
+  font-family: $font-body;
+  font-weight: 300;
+  vertical-align: top;
+  h1 {
+    font: bold 1rem $font-header;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  ul {
+    list-style-type: none;
+    li {
+      font-size: 0.9rem;
+      margin: 0.4rem 0;
+      a:hover {
+        color: $c-black;
+        text-decoration: underline;
+        :focus {
+          outline: 0;
         }
       }
     }
@@ -444,25 +449,29 @@ nav.post-navigation {
 
 // Search box styles
 .search-form {
-  font: normal 300 0.8rem $f1_lit;
+  font: normal 300 0.8rem $font-body;
   text-transform: uppercase;
+}
+.search-form .search-submit {
+  color: $c-white;
+  background-color: $c-black;
 }
 
 // Inverse sidebar and footer styles
 .sidebar-container,
 .footer-container {
-  background-color: $w;
-  color: $b;
+  background-color: $c-white;
+  color: $c-black;
 }
 .sidebar-container-inverse,
 .footer-container-inverse {
-  background-color: $b;
-  color: $w;
+  background-color: $c-black;
+  color: $c-white;
   a {
-    color: $w;
+    color: $c-white;
   }
   a:hover {
-    color: darken($w, 10) !important;
+    color: darken($c-white, 10) !important;
   }
 }
 
@@ -471,7 +480,7 @@ nav.post-navigation {
   margin: 2rem 0.3rem;
   p {
     text-align: right;
-    font-family: $f2_lit;
+    font-family: $font-header;
     font-size: 0.8rem;
     text-transform: uppercase;
     margin: 0;
@@ -485,33 +494,33 @@ a.read-more {
 
 // Extensions
 .__ext_base_title {
-  font: normal 900 2.8rem/1 $f6_lit;
+  font: normal 900 2.8rem/1 $font-post-title;
   letter-spacing: -0.06rem;
   text-align: center;
   margin-bottom: 1rem;
   a {
-    color: $b;
+    color: $c-black;
     text-decoration: none;
   }
 }
 .__ext_base_subtitle {
-  font: normal 300 1.1rem/1 $f6_lit;
+  font: normal 300 1.1rem/1 $font-post-title;
   // text-transform: uppercase;
   letter-spacing: -0.04rem;
   margin-bottom: 1em;
 }
 .__ext_body-serif {
-  font: normal 400 1.4rem/1.6 $f4_lit; // Serif
+  font: normal 400 1.4rem/1.6 $font-post-content; // Serif
   li {
     margin-left: 2.8rem;
   }
 }
 .__ext_body-sans-serif {
-  font: normal 300 1.2rem/1.5 $f1_lit; // Non-serif
+  font: normal 300 1.2rem/1.5 $font-body; // Non-serif
 }
 .__ext_posted_on {
   display: block;
-  font: normal 1rem/1 $f2_lit;
+  font: normal 1rem/1 $font-header;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   padding-top: 1rem;

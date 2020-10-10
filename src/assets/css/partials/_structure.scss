@@ -21,10 +21,10 @@ html {
 }
 
 body {
-  font: 400 12px/1.4 $f1_lit;
-  color: $c2;
+  font: 400 12px/1.4 $font-body;
+  color: $c-foreground;
   margin: 0;
-  background: $w;
+  background: $c-white;
   height: 100%;
   min-height: 100%;
   display: grid;
@@ -53,10 +53,10 @@ img {
 }
 
 a {
-  // color: $b;
+  // color: $c-black;
   text-decoration: none;
   :hover {
-    color: $b;
+    color: $c-black;
   }
   :focus {
     outline: 0;
@@ -69,7 +69,7 @@ a {
 
 input:focus {
   outline: 0;
-  border: 1px solid $c2;
+  border: 1px solid $c-foreground;
 }
 
 ol,

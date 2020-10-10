@@ -9,7 +9,7 @@
 ?>
   <div class="footer-container-inverse">
     <footer class="footer">
-      <p>&copy; <?=date('Y')?>&nbsp;&nbsp;&middot;&nbsp;&nbsp;BY <a href="https://twitter.com/danyim" target="_blank">danyim</a></p>
+      <p>&copy; <?=date('Y')?>&nbsp;&nbsp;&middot;&nbsp;&nbsp;Daniel Yim <a href="https://twitter.com/danyim" target="_blank">@danyim</a></p>
       <?php wp_footer();?>
     </footer>
   </div>

@@ -81,12 +81,11 @@ if (!function_exists('aa_posted_on')):
 		//   esc_attr( sprintf( __( 'View all posts by %s', 'neat' ), get_the_author() ) ),
 		//   esc_html( get_the_author() )
 		// );
-		printf(__('Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> by <span class="author vcard">%5$s</span></span>', 'neat'),
+		printf(__('<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>', 'neat'),
 			esc_url(get_permalink()),
 			esc_attr(get_the_time()),
 			esc_attr(get_the_date('c')),
-			esc_html(get_the_date()),
-			esc_html(get_the_author())
+			esc_html(get_the_date())
 		);
 	}
 endif;

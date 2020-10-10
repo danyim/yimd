@@ -12,7 +12,7 @@
     </div>
   </div> -->
   <div class="row">
-    <div class="col-md-10 col-md-offset-1 content-sans">
+    <div class="col-md content-sans">
       <p>&nbsp;</p>
       <?php the_content(); ?>
       <?php

@@ -43,7 +43,7 @@ a img.aligncenter {
 }
 
 .wp-caption {
-  background: darken($c1, 10%);
+  background: darken($c-background, 10%);
   max-width: 100%;
   padding: 2rem;
   text-align: center;
@@ -96,7 +96,7 @@ a img.aligncenter {
 }
 #wp-calendar caption {
   text-align: right;
-  color: $b;
+  color: $c-black;
   font-size: 12px;
   margin-top: 10px;
   margin-bottom: 15px;
@@ -108,18 +108,18 @@ a img.aligncenter {
   padding-bottom: 10px;
 }
 #wp-calendar tbody {
-  color: $b;
+  color: $c-black;
   font-family: sans-serif;
   font-weight: 300;
 }
 #wp-calendar tbody td {
-  background: $w;
-  border: 1px solid $w;
+  background: $c-white;
+  border: 1px solid $c-white;
   text-align: center;
   padding: 8px;
 }
 #wp-calendar tbody td:hover {
-  background: $w;
+  background: $c-white;
 }
 #wp-calendar tbody .pad {
   background: none;
