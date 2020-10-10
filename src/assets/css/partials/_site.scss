@@ -63,7 +63,7 @@
       display: inline-block;
       // On the fence about having this fixed width
       // width: 5.0rem;
-      margin: 0 0.40rem 0 0;
+      margin: 0 0.4rem 0 0;
 
       :hover {
         text-decoration: none;
@@ -73,9 +73,9 @@
       a {
         font-family: $f2_lit;
         text-transform: uppercase;
-        font-size: 1.00rem;
+        font-size: 1rem;
         display: block;
-        padding: 1.0rem 1.0rem 0.50rem 1.0rem;
+        padding: 1rem 1rem 0.5rem 1rem;
         color: $b;
         :hover {
           font-weight: bold;
@@ -98,7 +98,7 @@
 }
 
 .navbar-header .navbar-brand {
-  font: normal 800 2.2rem/1.0 $f6_lit;
+  font: normal 800 2.2rem/1 $f6_lit;
 }
 
 nav.post-navigation {
@@ -112,7 +112,7 @@ nav.post-navigation {
 
 .cover {
   height: 400px;
-  background-image: url('assets/img/bg-cover.jpeg');
+  background-image: url("assets/img/bg-cover.jpeg");
   background-size: cover;
   // border-top: 10px solid $c-contrast;
   // border-bottom: 20px solid $c-contrast;
@@ -122,27 +122,27 @@ nav.post-navigation {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.4);
     color: $b;
-    padding: 2.0rem;
-    margin: 3.0rem 0;
+    padding: 2rem;
+    margin: 3rem 0;
     transition: background-color 0.5s, border-color 0.4s ease-in-out;
     border-bottom: 3px solid transparent;
     h1 {
       // Name
-      font: normal 100 4.0rem/2.50rem $f6_lit;
-      letter-spacing: -0.20rem;
+      font: normal 100 4rem/2.5rem $f6_lit;
+      letter-spacing: -0.2rem;
       text-transform: uppercase;
       margin: 0;
     }
     h3 {
       // Title below name
       font: normal 300 1.25rem/2.55rem $f6_lit;
-      letter-spacing: -0.10rem;
+      letter-spacing: -0.1rem;
       text-transform: uppercase;
       margin: 0;
-      margin-top: 0.60rem;
+      margin-top: 0.6rem;
       // Little nudging to make it look right
       position: relative;
-      left: 0.30rem;
+      left: 0.3rem;
     }
   }
   .accent-block:hover {
@@ -152,7 +152,7 @@ nav.post-navigation {
 }
 
 .title-card {
-  font: normal 300 2.2rem/1.0 $f6_lit;
+  font: normal 300 2.2rem/1 $f6_lit;
   text-transform: uppercase;
   letter-spacing: -0.06rem;
   cursor: default;
@@ -161,9 +161,9 @@ nav.post-navigation {
   display: block;
   position: absolute;
   left: 0;
-  bottom: -1.0rem;
+  bottom: -1rem;
   width: 100%;
-  height: 1.0rem;
+  height: 1rem;
   margin-left: 0;
   background-color: $accent;
   content: "";
@@ -185,7 +185,7 @@ nav.post-navigation {
 .portfolio {
   width: 100%;
   max-width: 1120px;
-  margin: 2.0rem 0;
+  margin: 2rem 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -199,7 +199,7 @@ nav.post-navigation {
     border-radius: 0.6rem;
     transition: all 0.1s ease-in;
     min-height: 425px;
-    margin-bottom: 2.0rem;
+    margin-bottom: 2rem;
 
     .grey {
       color: #c0c0c0;
@@ -227,7 +227,7 @@ nav.post-navigation {
     }
     figcaption {
       flex: 0 0 25%;
-      font-size: 1.0rem;
+      font-size: 1rem;
       border-top: 1px solid #dedede;
       // border-top: 3px solid $accent;
       margin: 0 0.8rem;
@@ -247,7 +247,7 @@ nav.post-navigation {
 
 .resume {
   max-width: 1120px;
-  margin: 2.0rem 0;
+  margin: 2rem 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -258,7 +258,7 @@ nav.post-navigation {
     flex: 1 0 47%;
     border: 1px solid black;
     margin: 1.4rem 1.6rem 0.8rem 0;
-    padding: 0.6rem 1.0rem;
+    padding: 0.6rem 1rem;
     padding-top: 0;
   }
   section:last-child {
@@ -283,10 +283,10 @@ nav.post-navigation {
 
   .header {
     flex-basis: 100%;
-    margin-bottom: 1.0rem;
+    margin-bottom: 1rem;
     h1 {
       @extend .__ext_base_title;
-      font-size: 4.0rem !important;
+      font-size: 4rem !important;
       // font-family: $f6_lit;
       // text-transform: uppercase;
       // letter-spacing: -0.2rem;
@@ -300,9 +300,9 @@ nav.post-navigation {
       // }
       & > a:after {
         display: inline-block;
-        content: '•';
+        content: "•";
         color: #aaa;
-        margin: 0 .4rem;
+        margin: 0 0.4rem;
       }
 
       & > a:hover:after {
@@ -310,7 +310,7 @@ nav.post-navigation {
       }
 
       & > a:last-of-type:after {
-        content: '';
+        content: "";
         margin: 0;
       }
     }
@@ -338,7 +338,7 @@ nav.post-navigation {
         text-transform: uppercase;
       }
       li {
-        font-size: 1.0rem;
+        font-size: 1rem;
         list-style-type: none;
         text-align: center;
       }
@@ -370,7 +370,7 @@ nav.post-navigation {
 
 // Root style for all pages
 .aa_wrap {
-  margin: 1.0rem 0 3.0rem 0;
+  margin: 1rem 0 3rem 0;
   .content-title {
     @extend .__ext_base_title;
   }
@@ -386,7 +386,7 @@ nav.post-navigation {
   }
 
   article.aa_content {
-    margin: 1.0rem 0 4.0rem 0;
+    margin: 1rem 0 4rem 0;
   }
   .content {
     @extend .__ext_body-serif;
@@ -408,7 +408,7 @@ nav.post-navigation {
 
 // Sidebar styles
 .sidebar {
-  margin-top: 3.0rem;
+  margin-top: 3rem;
   margin-bottom: 1.5rem;
 
   // Individual widget boxes
@@ -420,16 +420,16 @@ nav.post-navigation {
     font-weight: 300;
     vertical-align: top;
     h1 {
-      font: bold 1.00rem $f2_lit;
+      font: bold 1rem $f2_lit;
       // letter-spacing: 0.20rem;
       text-transform: uppercase;
-      margin-bottom: 1.0rem;
+      margin-bottom: 1rem;
     }
     ul {
       list-style-type: none;
       li {
-        font-size: 0.90rem;
-        margin: 0.40rem 0;
+        font-size: 0.9rem;
+        margin: 0.4rem 0;
         a:hover {
           color: $b;
           text-decoration: underline;
@@ -444,7 +444,7 @@ nav.post-navigation {
 
 // Search box styles
 .search-form {
-  font: normal 300 0.80rem $f1_lit;
+  font: normal 300 0.8rem $f1_lit;
   text-transform: uppercase;
 }
 
@@ -468,11 +468,11 @@ nav.post-navigation {
 
 // Footer styles
 .footer {
-  margin: 2.0rem 0.3rem;
+  margin: 2rem 0.3rem;
   p {
     text-align: right;
     font-family: $f2_lit;
-    font-size: 0.80rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     margin: 0;
   }
@@ -485,36 +485,36 @@ a.read-more {
 
 // Extensions
 .__ext_base_title {
-  font: normal 900 2.80rem/1.0 $f6_lit;
+  font: normal 900 2.8rem/1 $f6_lit;
   letter-spacing: -0.06rem;
   text-align: center;
-  margin-bottom: 1.0rem;
+  margin-bottom: 1rem;
   a {
     color: $b;
     text-decoration: none;
   }
 }
 .__ext_base_subtitle {
-  font: normal 300 1.1rem/1.0 $f6_lit;
+  font: normal 300 1.1rem/1 $f6_lit;
   // text-transform: uppercase;
   letter-spacing: -0.04rem;
-  margin-bottom: 1.0em;
+  margin-bottom: 1em;
 }
 .__ext_body-serif {
-  font: normal 400 1.40rem/1.6 $f4_lit; // Serif
+  font: normal 400 1.4rem/1.6 $f4_lit; // Serif
   li {
     margin-left: 2.8rem;
   }
 }
 .__ext_body-sans-serif {
-  font: normal 300 1.20rem/1.5 $f1_lit; // Non-serif
+  font: normal 300 1.2rem/1.5 $f1_lit; // Non-serif
 }
 .__ext_posted_on {
   display: block;
-  font: normal 1.0rem/1.0 $f2_lit;
+  font: normal 1rem/1 $f2_lit;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  padding-top: 1.0rem;
+  padding-top: 1rem;
   color: #aaa;
   a {
     color: #aaa;
