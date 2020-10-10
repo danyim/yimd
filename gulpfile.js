@@ -197,7 +197,7 @@ gulp.task("vendorsJs", ["bowerFiles"], function () {
       // .pipe(gulp.dest(tempDir + '/assets/js')) // Comment if unminified source should not be in the build output
       .pipe(
         $.rename({
-          basename: "vendors",
+          basename: "vendor",
           suffix: ".min",
         })
       )
