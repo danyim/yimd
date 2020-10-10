@@ -192,7 +192,7 @@ gulp.task("vendorsJs", ["bowerFiles"], function () {
   return (
     gulp
       .src("src/assets/js/vendor/*.js")
-      .pipe($.filter("*.js"))
+      .pipe($.filter("**/*.js"))
       .pipe($.concat("vendors.js"))
       // .pipe(gulp.dest(tempDir + '/assets/js')) // Comment if unminified source should not be in the build output
       .pipe(
@@ -295,7 +295,7 @@ gulp.task("clear", function () {
  */
 gulp.task("clean", function () {
   return gulp
-    .src([tempDir, ".sass-cache", projectName + ".zip", buildDir], {
+    .src([tempDir, ".sass-cache", projectName + ".zip"], {
       read: false,
     }) // much faster
     .pipe($.ignore("node_modules/**")) //Example of a directory to ignore
