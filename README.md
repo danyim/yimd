@@ -29,11 +29,7 @@ WORDPRESS_DB_PASSWORD: wordpress
 Copy the example config and add credentials:
 
 ```bash
-cp ftp-config{.example,}.json
+cp .env{.example,}
 ```
 
-Then run `publish`:
-
-```bash
-yarn run publish
-```
+Then run `yarn run deploy`

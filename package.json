@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "scripts": {
     "start": "gulp serve",
-    "publish": "gulp clean && gulp build && gulp ftp",
+    "deploy": "gulp clean && gulp build && gulp ftp",
     "watch": "nodemon build --watch src -e php,scss"
   },
   "repository": {
@@ -19,6 +19,7 @@
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.18.8",
+    "dotenv": "^8.2.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-cache": "^0.4.6",

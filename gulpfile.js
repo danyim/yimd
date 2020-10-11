@@ -5,6 +5,7 @@ const gulp = require("gulp");
 const browserSync = require("browser-sync"); // Asynchronous browser loading on .scss file changes
 const reload = browserSync.reload;
 const ftp = require("vinyl-ftp");
+require("dotenv").config();
 
 // Project configuration
 const projectName = "dyim-theme"; // Project name, used for build zip.
@@ -38,22 +39,6 @@ const buildInclude = [
   "!src/assets/img/**/*",
   "!src/assets/js/**/*",
 ];
-
-const defaultFtpConfig = {
-  // Optional FTP connection information (do not check this in)
-  host: "ftp.mysite.com",
-  user: "my@user.name",
-  password: "mypass",
-  parallel: 5, // Max # of parallel connections
-  path: "/blog/wp-content/themes/yimd",
-};
-
-// Read FTP configuration file if it exists
-let ftpConfig;
-try {
-  const ftpConfigFile = require("./ftp-config.json");
-  ftpConfig = Object.assign({}, defaultFtpConfig, ftpConfigFile);
-} catch (ex) {} // Use default values in this file if .json isn't there
 
 /**
  * Browser Sync
@@ -340,17 +325,17 @@ gulp.task(
  */
 gulp.task("ftp", function () {
   const conn = ftp.create({
-    host: ftpConfig.host,
-    user: ftpConfig.user,
-    password: ftpConfig.password,
-    parallel: ftpConfig.parallel, // Max # of parallel connections
+    host: process.env.FTP_HOST,
+    user: process.env.FTP_USERNAME,
+    password: process.env.FTP_PASSWORD,
+    parallel: 5, // Max # of parallel connections
     log: $.util.log,
   });
   return (
     gulp
       .src(tempDir + "/**/*", { base: ".tmp/", buffer: false })
       // .pipe(conn.newer(ftpConfig.path)) // Only upload newer files
-      .pipe(conn.dest(ftpConfig.path))
+      .pipe(conn.dest(process.env.FTP_PATH))
   );
 });
 
