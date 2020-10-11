@@ -10,3 +10,4 @@ dist
 dist*
 *.sublime-workspace
 .backup
+.env
