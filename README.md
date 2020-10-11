@@ -9,7 +9,7 @@ This is the [Gulp](https://github.com/gulpjs/gulp)-based WordPress theme tailore
 1.  Use Node v11.10.1 `nvm install 11.10.1`
 1.  Fetch dependencies: `yarn install && bower install`
 1.  Run `make up` to pull the containers and build a Dockerized Wordpress installation
-1.  Navigate to `http://localhost:8000` and go through the setup process (you'll only need to do this once)
+1.  Navigate to `http://localhost:8080` and go through the setup process (you'll only need to do this once)
 1.  Activate the **daniely.im Theme** from Appearance > Themes
 
 ```
