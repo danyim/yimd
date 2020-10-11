@@ -1,6 +1,6 @@
 # daniely.im Wordpress Theme
 
-[Gulp](https://github.com/gulpjs/gulp)-based WordPress theme tailored for my personal blog and website @ [http://daniely.im](http://daniely.im).
+This is the [Gulp](https://github.com/gulpjs/gulp)-based WordPress theme tailored for my personal blog and website @ [http://blog.daniely.im](http://blog.daniely.im).
 
 <img src="https://github.com/danyim/yimd/raw/master/screenshot.png" align="center" />
 
