@@ -331,12 +331,10 @@ gulp.task("ftp", function () {
     parallel: 5, // Max # of parallel connections
     log: $.util.log,
   });
-  return (
-    gulp
-      .src(tempDir + "/**/*", { base: ".tmp/", buffer: false })
-      // .pipe(conn.newer(ftpConfig.path)) // Only upload newer files
-      .pipe(conn.dest(process.env.FTP_PATH))
-  );
+  return gulp
+    .src(tempDir + "/**/*", { base: ".tmp/", buffer: false })
+    .pipe(conn.newer(process.env.FTP_PATH)) // Only upload newer files
+    .pipe(conn.dest(process.env.FTP_PATH));
 });
 
 // ==== TASKS ==== //
