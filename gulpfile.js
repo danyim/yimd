@@ -333,7 +333,6 @@ gulp.task("ftp", function () {
   });
   return gulp
     .src(tempDir + "/**/*", { base: ".tmp/", buffer: false })
-    .pipe(conn.newer(process.env.FTP_PATH)) // Only upload newer files
     .pipe(conn.dest(process.env.FTP_PATH));
 });
 
